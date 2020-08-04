@@ -30,6 +30,7 @@ font-family: 'Roboto', sans-serif;*/
   --footer-bg-color: #2f303a;
   --border-color-clients: #afb1b8;
   --border-color-gallery-list: #eeeeee;
+  --foter-icon-bg: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -186,6 +187,20 @@ b {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--footer-bg-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/Hero/Header.jpg);
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -194,7 +209,6 @@ b {
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  background: var(--secondary-bg-color);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
@@ -257,17 +271,27 @@ b {
   text-align: left;
   margin: 0;
 }
-.advantages-logo img {
-  margin-top: auto;
-  margin-left: auto;
-}
-.advantages-logo {
-  background: var(--secondary-bg-color);
-  width: 270px;
+
+.advantages-item::before {
+  display: block;
+  content: "";
   height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-bg-color);
   border-radius: 4px;
-  padding: 25px 100px;
-  margin-bottom: 30px;
+}
+.advantages-item.icon-antenna::before {
+  background-image: url(../images/section1/antenna.svg);
+}
+.advantages-item.icon-clock::before {
+  background-image: url(../images/section1/clock.svg);
+}
+.advantages-item.icon-diagram::before {
+  background-image: url(../images/section1/diagram.svg);
+}
+.advantages-item.icon-cosmonaut::before {
+  background-image: url(../images/section1/astronaut.svg);
 }
 /* ----Чем мы занимаемся---*/
 
@@ -311,6 +335,9 @@ b {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
   background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .members-list > .members h3,
 p {
@@ -411,6 +438,40 @@ footer {
   margin-bottom: 20px;
 }
 
+.footer-button::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/send.svg);
+  margin-left: 10px;
+  background-size: contain;
+}
+
+.footer-social-item {
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--foter-icon-bg);
+}
+.footer-social-item:hover {
+  background-color: var(--accent-color);
+}
+.f-icon-facebook {
+  background-image: url(../images/Footer-social/facebook.svg);
+}
+.f-icon-twitter {
+  background-image: url(../images/Footer-social/twitter.svg);
+}
+.f-icon-linked {
+  background-image: url(../images/Footer-social/linkedin.svg);
+}
+.f-icon-instagram {
+  background-image: url(../images/Footer-social/instagram.svg);
+}
 /* ----Портфолио--Наши работы---*/
 .main-content {
   padding-top: 94px;
@@ -490,7 +551,8 @@ footer {
   letter-spacing: 0.06em;
   border-radius: 4px;
   text-align: center;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 .button.primary {
   background-color: var(--accent-color);
