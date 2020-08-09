@@ -32,24 +32,21 @@
         </nav>
         <ul class="list header-contact">
           <li class="item">
-            <a href="mailto:info@devstudio.com" class="flexbox">
-              <img
-                src="./images/envelope.svg"
-                alt="изображение письма"
-                width="16"
-                height="11.2"
-              />
+            <a
+              href="mailto:info@devstudio.com"
+              class="header-contact-link flexbox"
+            >
+              <svg class="header-contact-icon" width="16" height="11.2">
+                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
               info@devstudio.com
             </a>
           </li>
           <li class="item">
-            <a href="tel:+380961111111" class="flexbox">
-              <img
-                src="./images/smartphone.svg"
-                alt="изображение телефона"
-                width="10"
-                height="14.94"
-              />
+            <a href="tel:+380961111111" class="header-contact-link flexbox">
+              <svg class="header-contact-icon" width="10" height="14.94">
+                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
               +38 096 111 11 11
             </a>
           </li>
@@ -90,7 +87,7 @@
           <ul class="gallery flexbox list">
             <li class="gallery-list">
               <div>
-                <a href="">
+                <a href="" class="gallery-link">
                   <img
                     src="./images/portfolio/img.jpg"
                     alt="Ноутбук"
@@ -114,7 +111,7 @@
             </li>
 
             <li class="gallery-list">
-              <a href="">
+              <a href="" class="gallery-link">
                 <img
                   src="./images/portfolio/img2.jpg"
                   alt="Баскетбольная игра"
@@ -133,7 +130,7 @@
               </a>
             </li>
             <li class="gallery-list">
-              <a href="">
+              <a href="" class="gallery-link">
                 <img
                   src="./images/portfolio/img3.jpg"
                   alt="Логотип ресторана Seafood"
@@ -152,7 +149,7 @@
               </a>
             </li>
             <li class="gallery-list">
-              <a href="">
+              <a href="" class="gallery-link">
                 <img
                   src="./images/portfolio/img4.jpg"
                   alt="Наушники"
@@ -171,7 +168,7 @@
               </a>
             </li>
             <li class="gallery-list">
-              <a href="">
+              <a href="" class="gallery-link">
                 <img
                   src="./images/portfolio/img5.jpg"
                   alt="Коробочки"
@@ -190,7 +187,7 @@
               </a>
             </li>
             <li class="gallery-list">
-              <a href="">
+              <a href="" class="gallery-link">
                 <img
                   src="./images/portfolio/img6.jpg"
                   alt="Монитор"
@@ -209,7 +206,7 @@
               </a>
             </li>
             <li class="gallery-list">
-              <a href="">
+              <a href="" class="gallery-link">
                 <img
                   src="./images/portfolio/img7.jpg"
                   alt="Журнал"
@@ -228,7 +225,7 @@
               </a>
             </li>
             <li class="gallery-list">
-              <a href="">
+              <a href="" class="gallery-link">
                 <img
                   src="./images/portfolio/img8.jpg"
                   alt="Этикетка"
@@ -247,7 +244,7 @@
               </a>
             </li>
             <li class="gallery-list">
-              <a href="">
+              <a href="" class="gallery-link">
                 <img
                   src="./images/portfolio/img9.jpg"
                   alt="Ноутбук"
@@ -295,44 +292,32 @@
             присоединяйтесь
           </b>
           <ul class="list footer-social-list flexbox">
-            <li class="footer-social-item">
+            <li class="footer-social-item f-icon-instagram">
               <a href="Instagram" aria-label="Ссылка на Instagram">
-                <img
-                  src="./images/instagram.svg"
-                  alt="Instagram"
-                  width="20"
-                  height="20"
-                />
+                <svg class="footer-social-icon" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
-            <li class="footer-social-item">
+            <li class="footer-social-item f-icon-twitter">
               <a href="Twitter" aria-label="Ссылка на Twitter">
-                <img
-                  src="./images/twitter.svg"
-                  alt="Twitter"
-                  width="20"
-                  height="20"
-                />
+                <svg class="footer-social-icon" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg>
               </a>
             </li>
-            <li class="footer-social-item">
+            <li class="footer-social-item f-icon-facebook">
               <a href="Facebook" aria-label="Ссылка на Facebook">
-                <img
-                  src="./images/facebook.svg"
-                  alt="Facebook"
-                  width="20"
-                  height="20"
-                />
+                <svg class="footer-social-icon" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                </svg>
               </a>
             </li>
-            <li class="footer-social-item">
+            <li class="footer-social-item f-icon-linked">
               <a href="LinkedIn" aria-label="Ссылка на LinkedIn">
-                <img
-                  src="./images/linkedin.svg"
-                  alt="LinkedIn"
-                  width="20"
-                  height="20"
-                />
+                <svg class="footer-social-icon" width="20px" height="20px">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -341,7 +326,12 @@
           <b>
             Подпишитесь на рассылку
           </b>
-          <button class="button primary footer-button">Подписаться</button>
+          <button class="button footer-button primary">
+            Подписаться
+            <svg class="sent-icon" width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-send"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </footer>
