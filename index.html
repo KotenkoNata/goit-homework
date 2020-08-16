@@ -20,31 +20,46 @@
       <div class="header flexbox">
         <!-- Шапка сайта -->
         <nav class="main-nav flexbox">
-          <a href="./" class="logo">
+          <a href="./" class="logo animation">
             <span class="logo-accent">Web</span> Studio
           </a>
 
           <ul class="site-nav list">
-            <li class="item"><a href="" class="link current">Студия</a></li>
-            <li class="item"><a href="./portfolio.html">Портфолио</a></li>
-            <li class="item"><a href="">Контакты</a></li>
+            <li class="item">
+              <a href="" class="link current site-nav-link animation">Студия</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="animation">Портфолио</a>
+            </li>
+            <li class="item"><a href="" class="animation">Контакты</a></li>
           </ul>
         </nav>
         <ul class="list header-contact">
           <li class="item">
             <a
               href="mailto:info@devstudio.com"
-              class="header-contact-link flexbox"
+              class="header-contact-link flexbox animation"
             >
-              <svg class="header-contact-icon" width="16" height="11.2">
+              <svg
+                class="header-contact-icon animation"
+                width="16"
+                height="11.2"
+              >
                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
           <li class="item">
-            <a href="tel:+380961111111" class="header-contact-link flexbox">
-              <svg class="header-contact-icon" width="10" height="14.94">
+            <a
+              href="tel:+380961111111"
+              class="header-contact-link flexbox animation"
+            >
+              <svg
+                class="header-contact-icon animation"
+                width="10"
+                height="14.94"
+              >
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -61,7 +76,10 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a href="" class="button primary">Заказать услугу</a>
+
+          <button class="button primary" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <section class="section advantages">
@@ -127,37 +145,49 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list what-doing-list flexbox">
             <li class="what-doing-item">
-              <img
-                src="./images/section2/laptop.jpg"
-                alt="Ноутбук"
-                width="370"
-                height="294"
-              />
-              <h3 class="item-title details accurate">
-                Десктопные приложения
-              </h3>
+              <div class="doing-box">
+                <img
+                  src="./images/section2/laptop.jpg"
+                  alt="Ноутбук"
+                  width="370"
+                  height="294"
+                />
+                <div class="what-doing-title">
+                  <h3 class="item-title details accurate">
+                    Десктопные приложения
+                  </h3>
+                </div>
+              </div>
             </li>
             <li class="what-doing-item">
-              <img
-                src="./images/section2/smartphone.jpg"
-                alt="Смартфон"
-                width="370"
-                height="294"
-              />
-              <h3 class="item-title details accurate">
-                Мобильные приложения
-              </h3>
+              <div class="doing-box">
+                <img
+                  src="./images/section2/smartphone.jpg"
+                  alt="Смартфон"
+                  width="370"
+                  height="294"
+                />
+                <div class="what-doing-title">
+                  <h3 class="item-title details accurate">
+                    Мобильные приложения
+                  </h3>
+                </div>
+              </div>
             </li>
             <li class="what-doing-item">
-              <img
-                src="./images/section2/screen.jpg"
-                alt="Монитор"
-                width="370"
-                height="294"
-              />
-              <h3 class="item-title details accurate">
-                Дизайнерские решения
-              </h3>
+              <div class="doing-box">
+                <img
+                  src="./images/section2/screen.jpg"
+                  alt="Монитор"
+                  width="370"
+                  height="294"
+                />
+                <div class="what-doing-title">
+                  <h3 class="item-title details accurate">
+                    Дизайнерские решения
+                  </h3>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -183,7 +213,7 @@
                 <li class="social-item">
                   <a
                     href="Instagram"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Instagram"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -194,7 +224,7 @@
                 <li class="social-item">
                   <a
                     href="Twitter"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Twitter"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -205,7 +235,7 @@
                 <li class="social-item">
                   <a
                     href="Facebook"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Facebook"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -216,7 +246,7 @@
                 <li class="social-item">
                   <a
                     href="LinkedIn"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на LinkedIn"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -240,7 +270,7 @@
                 <li class="social-item">
                   <a
                     href="Instagram"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Instagram"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -251,7 +281,7 @@
                 <li class="social-item">
                   <a
                     href="Twitter"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Twitter"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -262,7 +292,7 @@
                 <li class="social-item">
                   <a
                     href="Facebook"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Facebook"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -273,7 +303,7 @@
                 <li class="social-item">
                   <a
                     href="LinkedIn"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на LinkedIn"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -297,7 +327,7 @@
                 <li class="social-item">
                   <a
                     href="Instagram"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Instagram"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -308,7 +338,7 @@
                 <li class="social-item">
                   <a
                     href="Twitter"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Twitter"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -319,7 +349,7 @@
                 <li class="social-item">
                   <a
                     href="Facebook"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Facebook"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -330,7 +360,7 @@
                 <li class="social-item">
                   <a
                     href="LinkedIn"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на LinkedIn"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -354,7 +384,7 @@
                 <li class="social-item">
                   <a
                     href="Instagram"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Instagram"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -365,7 +395,7 @@
                 <li class="social-item">
                   <a
                     href="Twitter"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Twitter"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -376,7 +406,7 @@
                 <li class="social-item">
                   <a
                     href="Facebook"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на Facebook"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -387,7 +417,7 @@
                 <li class="social-item">
                   <a
                     href="LinkedIn"
-                    class="social-icons-link"
+                    class="social-icons-link animation"
                     aria-label="Ссылка на LinkedIn"
                   >
                     <svg class="social-icon" width="20px" height="20px">
@@ -406,43 +436,43 @@
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="list flexbox clients-list">
             <li class="clients-logo">
-              <a class="flexbox clients-item" href="">
-                <svg class="clients-icon" width="44px" height="49px">
+              <a class="flexbox clients-item animation" href="">
+                <svg class="clients-icon animation" width="44px" height="49px">
                   <use href="./images/symbol-defs.svg#icon-logo1"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-logo">
-              <a class="flexbox clients-item" href="">
-                <svg class="clients-icon" width="40px" height="50px">
+              <a class="flexbox clients-item animation" href="">
+                <svg class="clients-icon animation" width="40px" height="50px">
                   <use href="./images/symbol-defs.svg#icon-logo2"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-logo">
-              <a class="flexbox clients-item" href="">
-                <svg class="clients-icon" width="41px" height="42px">
+              <a class="flexbox clients-item animation" href="">
+                <svg class="clients-icon animation" width="41px" height="42px">
                   <use href="./images/symbol-defs.svg#icon-logo3"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-logo">
-              <a class="flexbox clients-item" href="">
-                <svg class="clients-icon" width="79px" height="42px">
+              <a class="flexbox clients-item animation" href="">
+                <svg class="clients-icon animation" width="79px" height="42px">
                   <use href="./images/symbol-defs.svg#icon-logo4"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-logo">
-              <a class="flexbox clients-item" href="">
-                <svg class="clients-icon" width="59px" height="47px">
+              <a class="flexbox clients-item animation" href="">
+                <svg class="clients-icon animation" width="59px" height="47px">
                   <use href="./images/symbol-defs.svg#icon-logo5"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-logo">
-              <a class="flexbox clients-item" href="">
-                <svg class="clients-icon" width="88px" height="45px">
+              <a class="flexbox clients-item animation" href="">
+                <svg class="clients-icon animation" width="88px" height="45px">
                   <use href="./images/symbol-defs.svg#icon-logo6"></use>
                 </svg>
               </a>
@@ -455,7 +485,7 @@
       <!-- Футер -->
       <div class="footer flexbox">
         <div class="first-block">
-          <a href="/" class="footer-logo">
+          <a href="/" class="footer-logo animation">
             <span class="logo-accent">Web</span> Studio
           </a>
           <address>
@@ -477,28 +507,28 @@
             присоединяйтесь
           </b>
           <ul class="list footer-social-list flexbox">
-            <li class="footer-social-item f-icon-instagram">
+            <li class="footer-social-item f-icon-instagram animation">
               <a href="Instagram" aria-label="Ссылка на Instagram">
                 <svg class="footer-social-icon" width="20px" height="20px">
                   <use href="./images/symbol-defs.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item f-icon-twitter">
+            <li class="footer-social-item f-icon-twitter animation">
               <a href="Twitter" aria-label="Ссылка на Twitter">
                 <svg class="footer-social-icon" width="20px" height="20px">
                   <use href="./images/symbol-defs.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item f-icon-facebook">
+            <li class="footer-social-item f-icon-facebook animation">
               <a href="Facebook" aria-label="Ссылка на Facebook">
                 <svg class="footer-social-icon" width="20px" height="20px">
                   <use href="./images/symbol-defs.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item f-icon-linked">
+            <li class="footer-social-item f-icon-linked animation">
               <a href="LinkedIn" aria-label="Ссылка на LinkedIn">
                 <svg class="footer-social-icon" width="20px" height="20px">
                   <use href="./images/symbol-defs.svg#icon-linkedin"></use>
@@ -520,5 +550,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden animation" data-modal>
+      <div class="modal animation">
+        <button class="btn-close" data-modal-close>
+          <svg width="11px" height="11px">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

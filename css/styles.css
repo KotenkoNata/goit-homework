@@ -10,6 +10,7 @@
   --border-color-clients: #afb1b8;
   --border-color-gallery-list: #eeeeee;
   --foter-icon-bg: rgba(255, 255, 255, 0.1);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -29,7 +30,10 @@ body {
 header {
   border: 1px solid #ececec;
 }
-
+.animation {
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
 /* ----Лого---*/
 
 .logo {
@@ -94,6 +98,25 @@ site-nav a:focus {
   margin-right: 50px;
 }
 
+.site-nav-link {
+  position: relative;
+}
+
+.site-nav-link::after {
+  content: " ";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -2px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 /* ----Контакты---*/
 
 .flexbox {
@@ -133,13 +156,13 @@ site-nav a:focus {
   line-height: 1.14;
 }
 .header-contact-link:hover,
-header-contact-link:focus,
+.header-contact-link:focus,
 .footer-contact a:hover,
-footer-contact a:focus {
+.footer-contact a:focus {
   color: var(--accent-color);
 }
 .header-contact-link:hover .header-contact-icon,
-.header-contact-icon:focus .header-contact-icon {
+.header-contact-link:focus .header-contact-icon {
   fill: var(--accent-color);
 }
 .footer-contact a {
@@ -185,8 +208,8 @@ b {
   background-color: var(--footer-bg-color);
   background-image: linear-gradient(
       to right,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
     ),
     url(../images/Hero/Header.jpg);
   background-repeat: no-repeat;
@@ -279,7 +302,6 @@ b {
 
 .details {
   color: var(--most-view-text-color);
-  background-color: rgba(47, 48, 58, 0.8);
 }
 .what-doing-item {
   width: calc((100% - 60px) / 3);
@@ -287,6 +309,23 @@ b {
 }
 .what-doing-item:nth-child(3n) {
   margin-right: 0;
+}
+.doing-box {
+  position: relative;
+  display: flex;
+}
+.what-doing-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.what-doing-title h3 {
+  text-align: center;
 }
 
 /* ----Наша команда---*/
@@ -377,6 +416,7 @@ p {
   justify-content: center;
 }
 .clients-item {
+  display: inline-flex;
   width: 170px;
   height: 90px;
   border-width: 1px;
@@ -386,12 +426,20 @@ p {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+}
+
+.clients-icon {
   fill: var(--border-color-clients);
 }
+
 .clients-item:hover,
 .clients-item:focus {
-  fill: var(--accent-color);
   border-color: var(--accent-color);
+}
+
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 .clients-logo {
@@ -501,11 +549,14 @@ footer {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-
+}
+.gallery-title {
   border: 1px solid;
+  border-top: none;
   border-color: var(--border-color-gallery-list);
   box-sizing: border-box;
 }
+
 .gallery-list:nth-child(3n) {
   margin-right: 0;
 }
@@ -517,6 +568,33 @@ footer {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.gallery-relative {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-text {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition-property: transform;
+}
+.hover-text p {
+  text-align: left;
+  margin: 0;
+}
+.gallery-relative:hover .hover-text,
+.gallery-relative:focus .hover-text {
+  transform: translateY(0);
+}
+
 .works-list {
   justify-content: center;
   margin-bottom: 50px;
@@ -597,4 +675,57 @@ button:focus {
 }
 img {
   display: block;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+
+  opacity: 1;
+  transition-property: opacity;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  max-width: 528px;
+  height: 581px;
+
+  background-color: var(--most-view-text-color);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+
+  transition-property: transform;
+}
+
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--most-view-text-color);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
 }
