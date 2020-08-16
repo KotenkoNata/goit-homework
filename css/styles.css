@@ -31,7 +31,7 @@ header {
   border: 1px solid #ececec;
 }
 .animation {
-  transition-duration: 250ms;
+  transition-duration: 2500ms;
   transition-timing-function: var(--timing-function);
 }
 /* ----Лого---*/
