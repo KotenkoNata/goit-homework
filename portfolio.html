@@ -338,6 +338,7 @@
             </ul>
           </address>
         </div>
+
         <div class="second-block">
           <b>
             присоединяйтесь
@@ -377,12 +378,27 @@
           <b>
             Подпишитесь на рассылку
           </b>
-          <button class="button footer-button primary">
-            Подписаться
-            <svg class="sent-icon" width="24px" height="24px">
-              <use href="./images/symbol-defs.svg#icon-send"></use>
-            </svg>
-          </button>
+          <div class="footer-form flexbox">
+            <div class="email-field flexbox">
+              <input
+                class="footer-input animation"
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="E-mail"
+              />
+            </div>
+
+            <div class="flexbox subscribe">
+              <button class="button footer-button primary">
+                Подписаться
+
+                <svg class="sent-icon" width="24px" height="24px">
+                  <use href="./images/symbol-defs.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
