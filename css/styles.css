@@ -526,6 +526,7 @@ footer {
 }
 .footer-input:focus {
   border: 1px solid var(--accent-color);
+  outline: var(--accent-color);
 }
 
 .footer-input::placeholder {
@@ -759,6 +760,7 @@ img {
 .btn-close:hover {
   fill: var(--accent-color);
   background-color: var(--most-view-text-color);
+  outline: var(--accent-color);
 }
 
 .backdrop.is-hidden {
@@ -806,6 +808,7 @@ textarea {
 
 .form-input:focus {
   border: 1px solid var(--accent-color);
+  outline: var(--accent-color);
 }
 .form-input.comment {
   padding: 16px;
