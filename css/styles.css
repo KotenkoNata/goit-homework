@@ -178,6 +178,7 @@ site-nav a:focus {
   margin-top: 20px;
   margin-bottom: 9px;
   margin-left: 0;
+  text-align: start;
 }
 .footer-contact {
   margin-bottom: 9px;
@@ -456,7 +457,6 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
   align-items: baseline;
-  justify-content: start;
 }
 
 .footer-social-item {
@@ -471,23 +471,23 @@ footer {
   display: block;
 }
 .second-block {
-  margin-left: 50px;
+  margin-left: 70px;
   margin-top: 12px;
-  margin-right: 50px;
-}
-
-.third-block {
-  width: calc(50% - 15px);
-  margin-left: 15px;
-  margin-top: 12px;
-}
-.footer-social-item a {
-  padding: 12px;
-  display: block;
+  margin-right: 70px;
 }
 .third-block b {
   display: block;
   margin-bottom: 20px;
+}
+.third-block {
+  width: calc(50% - 15px);
+  margin-left: 15px;
+  margin-top: 12px;
+  justify-content: space-between;
+}
+.footer-social-item a {
+  padding: 12px;
+  display: block;
 }
 
 .footer-social-item {
@@ -510,6 +510,31 @@ footer {
 .sent-icon {
   margin-left: 10px;
 }
+.button.primary.footer-button {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.footer-input {
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--footer-bg-color);
+  padding: 15px 16px;
+  width: 358px;
+  margin-right: 12px;
+  color: var(--most-view-text-color);
+}
+.footer-input:focus {
+  border: 1px solid var(--accent-color);
+  outline: var(--accent-color);
+}
+
+.footer-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* ----Портфолио--Наши работы---*/
 .main-content {
   padding-top: 94px;
@@ -676,6 +701,9 @@ button:focus {
 img {
   display: block;
 }
+
+/* Модальное окно */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -694,9 +722,10 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
 
   width: 100%;
-  max-width: 528px;
+  width: 528px;
   height: 581px;
 
   background-color: var(--most-view-text-color);
@@ -709,6 +738,7 @@ img {
 
 .btn-close {
   position: absolute;
+  display: block;
   top: 8px;
   right: 8px;
 
@@ -718,6 +748,19 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--most-view-text-color);
+  padding: 1px 6px;
+}
+.close-icon {
+  display: inline-block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-close:focus,
+.btn-close:hover {
+  fill: var(--accent-color);
+  background-color: var(--most-view-text-color);
+  outline: var(--accent-color);
 }
 
 .backdrop.is-hidden {
@@ -728,4 +771,114 @@ img {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
+}
+textarea {
+  resize: none;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.comment {
+  margin-bottom: 20px;
+}
+.form-label {
+  margin-bottom: 4px;
+}
+
+.form-checkbox {
+  padding-left: 11px;
+  padding-right: 11px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.form-input {
+  width: 100%;
+  margin: 0;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  padding: 11px 42px;
+
+  color: var(--primary-text-color);
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent-color);
+  outline: var(--accent-color);
+}
+.form-input.comment {
+  padding: 16px;
+}
+.modal b {
+  color: var(--title-text-color);
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.15;
+  text-transform: none;
+  margin-bottom: 12px;
+}
+.button.primary.submit {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px 50px;
+  font-family: "Roboto", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 70%;
+  left: 12px;
+
+  transform: translateY(-50%);
+
+  display: inline-block;
+}
+.form-label {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1.16;
+  font-style: normal;
+  font-weight: normal;
+}
+.form-input:focus ~ .modal-icon {
+  fill: var(--accent-color);
+}
+
+.checkbox {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid #212121;
+  border-radius: 4px;
+}
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/icon/check.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
