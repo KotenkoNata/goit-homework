@@ -1,1 +1,52 @@
-// ложим общие штуки для всей страницы
+body {
+  color: $primary-text-color;
+  background-color: $primary-bg-color;
+  font-family: "Roboto";
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.details {
+  color: $most-view-text-color;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header {
+  border: 1px solid $header-color;
+}
+.animation {
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+}
+.flexbox {
+  display: flex;
+}
+.section-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+img {
+  display: block;
+}
+
+.header,
+.footer,
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+b {
+  font-weight: 700;
+  line-height: 1.14;
+  color: $most-view-text-color;
+  text-transform: uppercase;
+}

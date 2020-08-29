@@ -1,0 +1,90 @@
+.gallery {
+  flex-wrap: wrap;
+}
+
+.gallery a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $title-text-color;
+  margin: 0;
+}
+
+.gallery .lead {
+  text-align: left;
+
+  font-size: 16px;
+  line-height: 1.87;
+  margin-top: 9px;
+  margin-bottom: 0;
+}
+.gallery .excerpt {
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.gallery-list {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.gallery-list:nth-child(3n) {
+  margin-right: 0;
+}
+.gallery-list:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.gallery-relative {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-text {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition-property: transform;
+
+  .gallery-relative:hover &,
+  .gallery-relative:focus & {
+    transform: translateY(0);
+  }
+}
+
+.hover-text p {
+  text-align: left;
+  margin: 0;
+}
+
+.gallery-title {
+  border: 1px solid;
+  border-top: none;
+  border-color: $border-color-gallery-list;
+  box-sizing: border-box;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
