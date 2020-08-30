@@ -7,9 +7,6 @@
 .comment {
   margin-bottom: 20px;
 }
-.form-label {
-  margin-bottom: 4px;
-}
 
 .form-checkbox {
   padding-left: 11px;
@@ -36,16 +33,6 @@
   }
 }
 
-.modal b {
-  color: $title-text-color;
-  font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1.15;
-  text-transform: none;
-  margin-bottom: 12px;
-}
-
 .modal-icon {
   position: absolute;
   top: 70%;
@@ -61,6 +48,7 @@
   line-height: 1.16;
   font-style: normal;
   font-weight: normal;
+  margin-bottom: 4px;
 }
 .form-input:focus ~ .modal-icon {
   fill: $accent-color;

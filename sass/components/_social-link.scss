@@ -14,11 +14,11 @@
   &:nth-child(4n) {
     margin-right: 32px;
   }
-}
 
-.social-item a {
-  display: block;
-  padding: 12px;
+  a {
+    display: block;
+    padding: 12px;
+  }
 }
 
 .social-icons-link {
@@ -65,11 +65,11 @@
   &:focus {
     background-color: $accent-color;
   }
-}
 
-.footer-social-item a {
-  padding: 12px;
-  display: block;
+  a {
+    padding: 12px;
+    display: block;
+  }
 }
 
 .footer-social-icon {

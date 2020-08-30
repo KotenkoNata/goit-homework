@@ -30,6 +30,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .footer-button {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
 }
 .filtr-button {
   @extend %button;
@@ -49,9 +53,4 @@
     color: $most-view-text-color;
     background-color: $accent-color;
   }
-}
-
-.button.primary.footer-button {
-  padding-left: 28px;
-  padding-right: 28px;
 }

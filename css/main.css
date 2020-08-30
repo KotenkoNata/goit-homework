@@ -290,6 +290,14 @@ b {
           align-items: center;
 }
 
+.site-nav .link.current {
+  color: #2196f3;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav a {
   display: block;
   padding-top: 32px;
@@ -304,14 +312,6 @@ b {
 
 .site-nav a:hover, .site-nav a:focus {
   color: #2196f3;
-}
-
-.site-nav .link.current {
-  color: #2196f3;
-}
-
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .site-nav-link {
@@ -330,16 +330,6 @@ b {
   border-radius: 2px;
 }
 
-.header-contact > .item a {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header-contact > .item img {
-  margin-right: 10px;
-}
-
 .header-contact {
   margin-left: auto;
   font-style: normal;
@@ -354,6 +344,16 @@ b {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-contact > .item a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-contact > .item img {
+  margin-right: 10px;
 }
 
 .header-contact-icon {
@@ -418,6 +418,11 @@ b {
   margin-right: auto;
 }
 
+.button.primary .footer-button {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
 .filtr-button {
   background-color: #f5f4fa;
   color: #212121;
@@ -433,11 +438,6 @@ b {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   color: #ffffff;
   background-color: #2196f3;
-}
-
-.button.primary.footer-button {
-  padding-left: 28px;
-  padding-right: 28px;
 }
 
 .hero {
@@ -743,14 +743,12 @@ p {
   margin-left: 0;
 }
 
-.footer-contact a {
-  text-decoration: none;
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.6);
+.footer-contact {
+  margin-bottom: 9px;
 }
 
-.footer-contact a:hover, .footer-contact a:focus {
-  color: #2196f3;
+.footer-contact:last-child {
+  margin-bottom: 0;
 }
 
 .footer-contact .adress {
@@ -763,12 +761,14 @@ p {
   text-align: start;
 }
 
-.footer-contact {
-  margin-bottom: 9px;
+.footer-contact a {
+  text-decoration: none;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-contact:last-child {
-  margin-bottom: 0;
+.footer-contact a:hover, .footer-contact a:focus {
+  color: #2196f3;
 }
 
 footer {
@@ -780,19 +780,14 @@ footer {
           align-items: baseline;
 }
 
-.second-block b {
-  display: block;
-}
-
 .second-block {
   margin-left: 70px;
   margin-top: 12px;
   margin-right: 70px;
 }
 
-.third-block b {
+.second-block b {
   display: block;
-  margin-bottom: 20px;
 }
 
 .third-block {
@@ -802,6 +797,11 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.third-block b {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .footer-input {
@@ -859,10 +859,6 @@ footer {
   margin-bottom: 20px;
 }
 
-.form-label {
-  margin-bottom: 4px;
-}
-
 .form-checkbox {
   padding-left: 11px;
   padding-right: 11px;
@@ -890,16 +886,6 @@ footer {
   padding: 16px;
 }
 
-.modal b {
-  color: #212121;
-  font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1.15;
-  text-transform: none;
-  margin-bottom: 12px;
-}
-
 .modal-icon {
   position: absolute;
   top: 70%;
@@ -915,6 +901,7 @@ footer {
   line-height: 1.16;
   font-style: normal;
   font-weight: normal;
+  margin-bottom: 4px;
 }
 
 .form-input:focus ~ .modal-icon {
@@ -980,6 +967,21 @@ footer {
   transition-property: transform, -webkit-transform;
 }
 
+.modal b {
+  color: #212121;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.15;
+  text-transform: none;
+  margin-bottom: 12px;
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+}
+
 .btn-close {
   position: absolute;
   display: block;
@@ -1009,11 +1011,6 @@ footer {
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-}
-
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0.8);
-          transform: translate(-50%, -50%) scale(0.8);
 }
 
 textarea {

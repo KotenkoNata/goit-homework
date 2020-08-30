@@ -5,23 +5,26 @@ footer {
   align-items: baseline;
 }
 
-.second-block b {
-  display: block;
-}
 .second-block {
   margin-left: 70px;
   margin-top: 12px;
   margin-right: 70px;
+
+  b {
+    display: block;
+  }
 }
-.third-block b {
-  display: block;
-  margin-bottom: 20px;
-}
+
 .third-block {
   width: calc(50% - 15px);
   margin-left: 15px;
   margin-top: 12px;
   justify-content: space-between;
+
+  b {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 .footer-input {
