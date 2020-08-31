@@ -1,0 +1,56 @@
+.button {
+  @extend %button;
+
+  color: $title-text-color;
+  background-color: $primary-bg-color;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    color: $most-view-text-color;
+    background-color: $accent-color;
+  }
+}
+.button.primary {
+  background-color: $accent-color;
+  color: $primary-bg-color;
+  text-decoration: none;
+  padding: 10px 32px;
+  min-width: 200px;
+  border: none;
+
+  &.submit {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-button {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+.filtr-button {
+  @extend %button;
+
+  background-color: $secondary-bg-color;
+  color: $title-text-color;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  padding: 6px 22px;
+  border: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: $most-view-text-color;
+    background-color: $accent-color;
+  }
+}

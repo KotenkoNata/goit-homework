@@ -1,0 +1,31 @@
+.logo {
+  color: $title-text-color;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  margin-right: 85px;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.logo-accent {
+  color: $accent-color;
+}
+.footer-logo {
+  color: $most-view-text-color;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  margin-right: 85px;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

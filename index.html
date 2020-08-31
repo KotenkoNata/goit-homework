@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Studio</title>
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
-    />
-    <link
+    /> -->
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
+    /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -24,7 +24,7 @@
             <span class="logo-accent">Web</span> Studio
           </a>
 
-          <ul class="site-nav list">
+          <ul class="site-nav list flexbox">
             <li class="item">
               <a href="" class="link current site-nav-link animation">Студия</a>
             </li>
@@ -34,7 +34,7 @@
             <li class="item"><a href="" class="animation">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="list header-contact">
+        <ul class="list header-contact flexbox">
           <li class="item">
             <a
               href="mailto:info@devstudio.com"
@@ -87,7 +87,7 @@
           <!-- Первая секция - наши преимущества-->
           <h2 hidden>Наши преимущества</h2>
           <!--скрытый заголовок-->
-          <ul class="list advantages-list">
+          <ul class="list advantages-list flexbox">
             <li class="advantages-item">
               <div class="advantages-icon">
                 <svg width="70px" height="70px">
@@ -145,7 +145,7 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list what-doing-list flexbox">
             <li class="what-doing-item">
-              <div class="doing-box">
+              <div class="doing-box flexbox">
                 <img
                   src="./images/section2/laptop.jpg"
                   alt="Ноутбук"
@@ -153,9 +153,7 @@
                   height="294"
                 />
                 <div class="what-doing-title">
-                  <h3 class="item-title details accurate">
-                    Десктопные приложения
-                  </h3>
+                  <h3 class="item-title accurate">Десктопные приложения</h3>
                 </div>
               </div>
             </li>
@@ -168,9 +166,7 @@
                   height="294"
                 />
                 <div class="what-doing-title">
-                  <h3 class="item-title details accurate">
-                    Мобильные приложения
-                  </h3>
+                  <h3 class="item-title accurate">Мобильные приложения</h3>
                 </div>
               </div>
             </li>
@@ -183,9 +179,7 @@
                   height="294"
                 />
                 <div class="what-doing-title">
-                  <h3 class="item-title details accurate">
-                    Дизайнерские решения
-                  </h3>
+                  <h3 class="item-title accurate">Дизайнерские решения</h3>
                 </div>
               </div>
             </li>
@@ -206,10 +200,8 @@
                 height="260"
               />
               <h3 class="element-title">Игорь Демьяненко</h3>
-              <p lang="en" class="description">
-                Product Designer
-              </p>
-              <ul class="social-list list">
+              <p lang="en" class="description">Product Designer</p>
+              <ul class="social-list list flexbox">
                 <li class="social-item">
                   <a
                     href="Instagram"
@@ -266,7 +258,7 @@
               />
               <h3 class="element-title">Ольга Репина</h3>
               <p lang="en" class="description">Frontend Developer</p>
-              <ul class="social-list list">
+              <ul class="social-list list flexbox">
                 <li class="social-item">
                   <a
                     href="Instagram"
@@ -323,7 +315,7 @@
               />
               <h3 class="element-title">Николай Тарасов</h3>
               <p lang="en" class="description">Marketing</p>
-              <ul class="social-list list">
+              <ul class="social-list list flexbox">
                 <li class="social-item">
                   <a
                     href="Instagram"
@@ -380,7 +372,7 @@
               />
               <h3 class="element-title">Михаил Ермаков</h3>
               <p lang="en" class="description">UI Designer</p>
-              <ul class="social-list list">
+              <ul class="social-list list flexbox">
                 <li class="social-item">
                   <a
                     href="Instagram"
@@ -504,9 +496,7 @@
         </div>
 
         <div class="second-block">
-          <b>
-            присоединяйтесь
-          </b>
+          <b> присоединяйтесь </b>
           <ul class="list footer-social-list flexbox">
             <li class="footer-social-item f-icon-instagram animation">
               <a href="Instagram" aria-label="Ссылка на Instagram">
@@ -539,9 +529,7 @@
           </ul>
         </div>
         <div class="third-block">
-          <b>
-            Подпишитесь на рассылку
-          </b>
+          <b> Подпишитесь на рассылку </b>
           <div class="footer-form flexbox">
             <div class="email-field flexbox">
               <input

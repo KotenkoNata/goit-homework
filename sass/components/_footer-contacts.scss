@@ -1,0 +1,28 @@
+.footer-contact {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .adress {
+    font-weight: 400;
+    color: $most-view-text-color;
+    font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 9px;
+    margin-left: 0;
+    text-align: start;
+  }
+
+  a {
+    text-decoration: none;
+    font-style: normal;
+    color: $color-with-transperency;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}

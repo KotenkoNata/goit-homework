@@ -1,0 +1,50 @@
+.main-nav,
+.header {
+  align-items: center;
+}
+
+.site-nav {
+  .link.current {
+    color: $accent-color;
+  }
+  .item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  a {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.site-nav-link {
+  position: relative;
+
+  &::after {
+    content: " ";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -2px;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+}

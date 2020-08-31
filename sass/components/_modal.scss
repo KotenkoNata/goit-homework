@@ -1,0 +1,83 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+
+  opacity: 1;
+  transition-property: opacity;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+
+  width: 100%;
+  width: 528px;
+  height: 581px;
+
+  background-color: $most-view-text-color;
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+
+  transition-property: transform;
+
+  b {
+    color: $title-text-color;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.15;
+    text-transform: none;
+    margin-bottom: 12px;
+  }
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.btn-close {
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: $most-view-text-color;
+  padding: 1px 6px;
+
+  &:focus,
+  &:hover {
+    fill: $accent-color;
+    background-color: $most-view-text-color;
+    outline: $accent-color;
+  }
+}
+.close-icon {
+  display: inline-block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+textarea {
+  resize: none;
+}

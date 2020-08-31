@@ -1,0 +1,30 @@
+.what-doing {
+  padding-bottom: 94px;
+}
+
+.what-doing-item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.doing-box {
+  position: relative;
+}
+.what-doing-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.what-doing-list > .what-doing-item h3 {
+  text-align: center;
+  color: $most-view-text-color;
+}
