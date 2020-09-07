@@ -288,6 +288,15 @@ b {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .site-nav .link.current {
@@ -331,6 +340,9 @@ b {
 }
 
 .header-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-left: auto;
   font-style: normal;
   font-weight: 500;
@@ -380,6 +392,12 @@ b {
 .header-contact-link:hover,
 .header-contact-link:focus {
   color: #2196f3;
+}
+
+.header-contact-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .button {
@@ -477,6 +495,12 @@ b {
   padding-bottom: 94px;
 }
 
+.advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .section-title,
 .item-title {
   color: #212121;
@@ -534,6 +558,12 @@ b {
   padding-bottom: 94px;
 }
 
+.what-doing-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .what-doing-item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
@@ -566,6 +596,12 @@ b {
   background-color: #f5f4fa;
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.members-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .element-title {
@@ -602,6 +638,9 @@ p {
 }
 
 .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -690,12 +729,21 @@ p {
   margin-left: 10px;
 }
 
+.footer-social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .clients {
   margin-top: 94px;
   margin-bottom: 94px;
 }
 
 .clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -780,6 +828,12 @@ footer {
           align-items: baseline;
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .second-block {
   margin-left: 70px;
   margin-top: 12px;
@@ -841,6 +895,12 @@ footer {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form-field {

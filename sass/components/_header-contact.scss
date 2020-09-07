@@ -1,4 +1,6 @@
 .header-contact {
+  display: flex;
+
   margin-left: auto;
 
   font-style: normal;
@@ -40,4 +42,8 @@
 .header-contact-link:hover,
 .header-contact-link:focus {
   color: $accent-color;
+}
+
+.header-contact-link {
+  display: flex;
 }

@@ -1,9 +1,11 @@
 .main-nav,
 .header {
   align-items: center;
+  display: flex;
 }
 
 .site-nav {
+  display: flex;
   .link.current {
     color: $accent-color;
   }

@@ -5,6 +5,10 @@ footer {
   align-items: baseline;
 }
 
+.footer {
+  display: flex;
+}
+
 .second-block {
   margin-left: 70px;
   margin-top: 12px;
@@ -46,4 +50,7 @@ footer {
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
   }
+}
+.footer-form {
+  display: flex;
 }

@@ -1,6 +1,9 @@
 .what-doing {
   padding-bottom: 94px;
 }
+.what-doing-list {
+  display: flex;
+}
 
 .what-doing-item {
   width: calc((100% - 60px) / 3);

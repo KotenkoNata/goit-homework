@@ -3,6 +3,10 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+.members-list {
+  display: flex;
+}
 .element-title {
   color: $title-text-color;
   font-weight: 500;
