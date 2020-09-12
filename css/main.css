@@ -349,7 +349,7 @@ b {
   background-color: transparent;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu-button {
     display: none;
   }
@@ -1077,13 +1077,6 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-@media (max-width: 479px) {
-  .footer-social-list {
-    margin-top: 20px;
-    margin-bottom: 60px;
-  }
 }
 
 @media (max-width: 480px) {
