@@ -33,6 +33,23 @@
   }
   @media (max-width: 480px) {
     display: none;
+
+    .menu-container & {
+      display: inline-block;
+    }
+    text-align: center;
+  }
+  a {
+    font-size: 18px;
+    line-height: 1.17;
+    display: block;
+  }
+  .item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
