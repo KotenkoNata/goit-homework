@@ -3,15 +3,13 @@
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  text-align: left;
 
   @include for-size(phone) {
-    text-align: left;
-
     font-size: 12px;
     line-height: 1.17;
   }
   @include for-size(tablet) {
-    text-align: left;
     font-size: 12px;
     ine-height: 1.16;
   }

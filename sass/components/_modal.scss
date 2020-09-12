@@ -23,7 +23,7 @@
   text-align: center;
   width: 100%;
 
-  height: 581px;
+  // height: 581px;
 
   background-color: $most-view-text-color;
   border-radius: 4px;
@@ -40,6 +40,7 @@
     line-height: 1.15;
     text-transform: none;
     margin-bottom: 12px;
+    display: block;
   }
 
   .backdrop.is-hidden & {
@@ -60,6 +61,7 @@
   }
   @include for-size(desktop) {
     width: 528px;
+    max-width: 528px;
   }
 }
 

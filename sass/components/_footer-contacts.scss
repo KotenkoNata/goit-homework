@@ -38,6 +38,7 @@
   }
   @include for-size(desktop) {
     margin-bottom: 9px;
+    text-align: left;
     &:last-child {
       margin-bottom: 0;
     }

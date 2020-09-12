@@ -47,6 +47,10 @@
   .item {
     margin-bottom: 16px;
 
+    @include for-size(desktop) {
+      margin-bottom: 0;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
