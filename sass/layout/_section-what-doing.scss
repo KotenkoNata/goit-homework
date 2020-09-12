@@ -1,6 +1,12 @@
 .what-doing {
   padding-bottom: 94px;
 }
+
+@media (max-width: 480px) {
+  .what-doing {
+    display: none;
+  }
+}
 .what-doing-list {
   display: flex;
 }

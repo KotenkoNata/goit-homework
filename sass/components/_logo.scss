@@ -5,7 +5,6 @@
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  margin-right: 85px;
 
   &:hover,
   &:focus {
@@ -22,10 +21,25 @@
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  margin-right: 85px;
 
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-logo {
+    margin-right: 85px;
+  }
+  .logo {
+    margin-right: 85px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo,
+  .footer-logo {
+    font-size: 24px;
+    line-height: 1.17;
   }
 }

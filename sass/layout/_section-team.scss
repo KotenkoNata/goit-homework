@@ -4,8 +4,29 @@
   padding-bottom: 94px;
 }
 
+@media (max-width: 480px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .members {
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+
+    &:nth-child(4n) {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .members-list {
   display: flex;
+}
+
+@media (max-width: 480px) {
+  .members-list {
+    display: block;
+  }
 }
 .element-title {
   color: $title-text-color;
@@ -20,18 +41,22 @@
   margin-top: 0;
   margin-bottom: 16px;
 }
-.members {
-  width: calc((100% - 90px) / 4);
-  margin-right: 30px;
 
+@media (min-width: 1200px) {
+  .members {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+
+    &:nth-child(4n) {
+      margin-right: o;
+    }
+  }
+}
+.members {
   background-color: $primary-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
-  &:nth-child(4n) {
-    margin-right: o;
-  }
 }
 
 .members-list > .members h3,

@@ -11,10 +11,86 @@
     <header>
       <div class="header">
         <!-- Шапка сайта -->
+
+        <div class="phone-header">
         <nav class="main-nav">
+
+          <div class="phone-container">
+
           <a href="./" class="logo animation">
             <span class="logo-accent">Web</span> Studio
           </a>
+
+
+</div>
+     <div class="phone-backdrop">
+       <button type="button" class="menu-button is-open"
+          aria-expanded="false"
+          aria-controls="phone-menu-container"
+          data-menu-button >
+            <svg
+                class=" animation"
+                width="18.67"
+                height="18.67"
+                aria-label="Переключатель для мобильного меню"
+              >
+                <use class="icon-cross" href="./images/symbol-defs.svg#icon-close_24px"></use>
+                <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu_24px"></use>
+              </svg>
+          </button>
+       
+
+          
+
+<div class="phone-menu-container is-open" id="phone-menu-container" data-menu>
+
+  
+        <ul class="site-nav list">
+            <li class="item">
+              <a href="" class="link current site-nav-link animation">Студия</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="animation">Портфолио</a>
+            </li>
+            <li class="item"><a href="" class="animation">Контакты</a></li>
+          </ul>
+
+        <div class="header-phone-contact">
+          <ul class="list header-contact">
+          <li class="item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="header-contact-link animation"
+            >
+              <svg
+                class="header-contact-icon animation"
+                width="16"
+                height="11.2"
+              >
+                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="item">
+            <a href="tel:+380961111111" class="header-contact-link animation">
+              <svg
+                class="header-contact-icon animation"
+                width="10"
+                height="14.94"
+              >
+                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        </div>
+</div>
+
+        </div>
+        
+          <div class="header-navagation">
 
           <ul class="site-nav list">
             <li class="item">
@@ -25,7 +101,9 @@
             </li>
             <li class="item"><a href="" class="animation">Контакты</a></li>
           </ul>
+        
         </nav>
+        <div class="header-contact-box">
         <ul class="list header-contact">
           <li class="item">
             <a
@@ -55,11 +133,14 @@
             </a>
           </li>
         </ul>
+        
+      </div>
+      </div>
       </div>
     </header>
     <main>
       <section class="hero">
-        <div>
+        <div class="hero-background">
           <!-- Герой -->
           <h1 class="hero-title">
             Эффективные решения <br />
@@ -83,7 +164,7 @@
                   <use href="./images/symbol-defs.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="item-title">Внимание к деталям</h3>
+              <h3 class="advantages-title">Внимание к деталям</h3>
               <p class="advantages-description">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
@@ -95,7 +176,7 @@
                   <use href="./images/symbol-defs.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="item-title">Пунктуальность</h3>
+              <h3 class="advantages-title">Пунктуальность</h3>
               <p class="advantages-description">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
@@ -107,7 +188,7 @@
                   <use href="./images/symbol-defs.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="item-title">Планирование</h3>
+              <h3 class="advantages-title">Планирование</h3>
               <p class="advantages-description">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
@@ -119,7 +200,7 @@
                   <use href="./images/symbol-defs.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="item-title">Современные технологии</h3>
+              <h3 class="advantages-title">Современные технологии</h3>
               <p class="advantages-description">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
@@ -136,10 +217,12 @@
             <li class="what-doing-item">
               <div class="doing-box">
                 <img
-                  src="./images/section2/laptop.jpg"
                   alt="Ноутбук"
-                  width="370"
-                  height="294"
+                  src="./images/Optimaze/WhatDo1.jpg"
+                  srcset="
+                    ./images/optimaze/WhatDo1.jpg   1x,
+                    ./images/optimaze/WhatDo12@.jpg 2x
+                  "
                 />
                 <div class="what-doing-title">
                   <h3 class="item-title accurate">Десктопные приложения</h3>
@@ -149,10 +232,12 @@
             <li class="what-doing-item">
               <div class="doing-box">
                 <img
-                  src="./images/section2/smartphone.jpg"
                   alt="Смартфон"
-                  width="370"
-                  height="294"
+                  src="./images/optimaze/WhatDo2.jpg"
+                  srcset="
+                    ./images/optimaze/WhatDo2.jpg   1x,
+                    ./images/optimaze/WhatDo22@.jpg 2x
+                  "
                 />
                 <div class="what-doing-title">
                   <h3 class="item-title accurate">Мобильные приложения</h3>
@@ -162,10 +247,12 @@
             <li class="what-doing-item">
               <div class="doing-box">
                 <img
-                  src="./images/section2/screen.jpg"
                   alt="Монитор"
-                  width="370"
-                  height="294"
+                  src="./images/optimaze/WhatDo3.jpg"
+                  srcset="
+                    ./images/optimaze/WhatDo3.jpg   1x,
+                    ./images/optimaze/WhatDo12@.jpg 2x
+                  "
                 />
                 <div class="what-doing-title">
                   <h3 class="item-title accurate">Дизайнерские решения</h3>
@@ -182,12 +269,35 @@
           <ul class="list members-list">
             <li class="members">
               <!--Первая фотка-->
-              <img
-                src="./images/section3/portreit1.jpg"
-                alt="Портрет Игоря Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="             
+                    ./images/optimaze/team1desktop.jpg 1x,
+                    ./images/optimaze/team1desktop2@.jpg 2x
+                  
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/optimaze/team1tablet.jpg 1x,
+                    ./images/optimaze/team1tablet2@.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/optimaze/team1phone.jpg 1x,
+                    ./images/optimaze/team1phone2@.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/optimaze/team1desktop.jpg"
+                  alt="Портрет Игоря Демьяненко"
+                  
+                />
+              </picture>
               <h3 class="element-title">Игорь Демьяненко</h3>
               <p lang="en" class="description">Product Designer</p>
               <ul class="social-list list">
@@ -239,12 +349,35 @@
             </li>
             <li class="members">
               <!--Вторая фотка-->
-              <img
-                src="./images/section3/portreit2.jpg"
-                alt="Портрет Ольги Репиной"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="             
+                    ./images/optimaze/team2desktop.jpg 1x,
+                    ./images/optimaze/team2desktop2@.jpg 2x
+                  
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/optimaze/team2tablet.jpg 1x,
+                    ./images/optimaze/team2tablet2@.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/optimaze/team2phone.jpg 1x,
+                    ./images/optimaze/team2phone2@.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/optimaze/team2desktop.jpg"
+                  alt="Портрет Ольги Репиной"
+                  
+                />
+              </picture>
               <h3 class="element-title">Ольга Репина</h3>
               <p lang="en" class="description">Frontend Developer</p>
               <ul class="social-list list">
@@ -296,12 +429,36 @@
             </li>
             <li class="members">
               <!--Третья фотка-->
-              <img
-                src="./images/section3/portreit3.jpg"
-                alt="Портрет Николая Тарасова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="             
+                    ./images/optimaze/team3desktop.jpg 1x,
+                    ./images/optimaze/team3desktop@.jpg 2x
+                  
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/optimaze/team3tablet.jpg 1x,
+                    ./images/optimaze/team3tablet2@.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/optimaze/team3phone.jpg 1x,
+                    ./images/optimaze/team3phone2@.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/optimaze/team3desktop.jpg"
+                
+                  alt="Портрет Николай Тарасова"
+                  
+                />
+              </picture>
               <h3 class="element-title">Николай Тарасов</h3>
               <p lang="en" class="description">Marketing</p>
               <ul class="social-list list">
@@ -353,12 +510,35 @@
             </li>
             <li class="members">
               <!--Четвертая фотка-->
-              <img
-                src="./images/section3/portreit4.jpg"
-                alt="Портрет Михаила Ермакова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="             
+                    ./images/optimaze/team4desktop.jpg 1x,
+                    ./images/optimaze/team4desktop2@.jpg 2x
+                  
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/optimaze/team4tablet.jpg 1x,
+                    ./images/optimaze/team4tablet2@.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/optimaze/team4phone.jpg 1x,
+                    ./images/optimaze/team4phone2@.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/optimaze/team4desktop.jpg"
+                  alt="Портрет Михаила Ермакова"
+                  
+                />
+              </picture>
               <h3 class="element-title">Михаил Ермаков</h3>
               <p lang="en" class="description">UI Designer</p>
               <ul class="social-list list">
@@ -640,5 +820,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

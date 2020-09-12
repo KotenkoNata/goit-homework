@@ -1,9 +1,6 @@
 .hero {
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
 
-  height: 600px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -14,11 +11,75 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/Hero/Header.jpg);
+    url(../../images/optimaze/herodesktop.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (max-width: 480px) {
+  .hero {
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/optimaze/herophone.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(./../images/optimaze/herophone2@.jpg);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/optimaze/herodesktop.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(./../images/optimaze/herodesktop2@.jpg);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/optimaze/herotablet.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(./../images/optimaze/herotablet2@.jpg);
+    }
+  }
+}
 .hero-title {
   color: $most-view-text-color;
   font-weight: 900;
@@ -31,5 +92,12 @@
 
   + a {
     align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 25px;
+    line-height: 1.62;
   }
 }

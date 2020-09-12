@@ -1,3 +1,6 @@
+// * {
+//   border: 1px solid green;
+// }
 body {
   color: $primary-text-color;
   background-color: $primary-bg-color;
@@ -6,6 +9,10 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.71;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 .details {
   color: $most-view-text-color;
@@ -17,6 +24,12 @@ body {
 }
 header {
   border: 1px solid $header-color;
+}
+
+@media (max-width: 480px) {
+  header {
+    border: none;
+  }
 }
 .animation {
   transition-duration: 250ms;
@@ -31,22 +44,53 @@ header {
   text-align: center;
   margin-bottom: 50px;
 }
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
+}
 img {
   display: block;
-}
-
-.header,
-.footer,
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 100%;
+  height: auto;
 }
 b {
   font-weight: 700;
   line-height: 1.14;
   color: $most-view-text-color;
   text-transform: uppercase;
+}
+
+.footer,
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 480px) {
+  .header,
+  .footer,
+  .container {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header,
+  .footer,
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header,
+  .footer,
+  .container {
+    width: 1200px;
+  }
 }
