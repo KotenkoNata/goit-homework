@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  overflow-y: scroll;
 
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
@@ -12,7 +13,6 @@
   transition-property: opacity;
 
   @media (max-width: 480px) {
-    overflow-y: scroll;
   }
 }
 
@@ -45,6 +45,17 @@
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  @media (max-width: 480px) {
+    max-width: 450px;
+    text-align: center;
+
+    b {
+      font-size: 20px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+    }
   }
 }
 
