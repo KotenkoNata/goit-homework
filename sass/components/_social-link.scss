@@ -2,6 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include for-size(tablet) {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
 }
 
 .social-item {
@@ -98,10 +103,8 @@
 .footer-social-list {
   display: flex;
   justify-content: center;
-}
 
-@include for-size(phone) {
-  .footer-social-list {
+  @include for-size(phone) {
     margin-top: 20px;
     margin-bottom: 60px;
   }

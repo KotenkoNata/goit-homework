@@ -51,6 +51,21 @@
       margin-bottom: 0;
     }
   }
+  @include for-size(tablet) {
+    margin-left: auto;
+    a {
+      display: block;
+      font-size: 12px;
+      line-height: 1.17;
+    }
+    .item {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .header-contact-icon {

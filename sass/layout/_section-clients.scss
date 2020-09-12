@@ -1,40 +1,24 @@
-@include for-size(phone) {
-  .clients {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-  .clients-logo:nth-child(2n) {
-    margin-left: 30px;
-  }
-  .clients-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.clients {
+  margin-top: 60px;
+  margin-bottom: 60px;
 
-    border: 1px solid $border-color-clients;
-    border-radius: 4px;
-    box-sizing: border-box;
-    height: 90px;
-
-    width: calc((100% - 30px) / 2);
-
-    margin-top: 30px;
-
-    &:nth-last-of-type(5) {
-      margin-top: 0;
-    }
-    &:nth-last-of-type(6) {
-      margin-top: 0;
+  @include for-size(desktop) {
+    .clients {
+      margin-top: 94px;
+      margin-bottom: 94px;
     }
   }
 }
 
 .clients-list {
   display: flex;
-}
 
-@include for-size(phone) {
-  .clients-list {
+  @include for-size(phone) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @include for-size(tablet) {
     flex-wrap: wrap;
     justify-content: space-around;
   }
@@ -49,6 +33,62 @@
   }
 }
 
+.clients-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid $border-color-clients;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 90px;
+
+  @include for-size(desktop) {
+    width: calc((100% - 5 * 30px) / 6);
+    margin-left: 30px;
+
+    &:nth-last-of-type(6n) {
+      margin-left: 0;
+    }
+  }
+  @include for-size(tablet) {
+    width: calc((100% - 60px) / 3);
+
+    margin-top: 30px;
+    margin-left: 30px;
+
+    &:nth-last-of-type(5) {
+      margin-top: 0;
+    }
+    &:nth-last-of-type(6) {
+      margin-top: 0;
+      margin-left: 0;
+    }
+    &:nth-last-of-type(4) {
+      margin-top: 0;
+    }
+    &:nth-last-of-type(3) {
+      margin-left: 0;
+    }
+  }
+  @include for-size(phone) {
+    width: calc((100% - 30px) / 2);
+
+    margin-top: 30px;
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+
+    &:nth-last-of-type(5) {
+      margin-top: 0;
+    }
+    &:nth-last-of-type(6) {
+      margin-top: 0;
+    }
+  }
+}
+
 @include for-size(desktop) {
   .clients-item {
     @include centeredFlex(inline-flex);
@@ -56,26 +96,11 @@
     border: 1px solid $border-color-clients;
     box-sizing: border-box;
     border-radius: 4px;
+    width: 170px;
 
     &:hover,
     &:focus {
       border-color: $accent-color;
-    }
-  }
-  .clients {
-    margin-top: 94px;
-    margin-bottom: 94px;
-  }
-
-  .clients-item {
-    width: 170px;
-  }
-  .clients-logo {
-    width: calc((100% - 5 * 30px) / 6);
-    margin-left: 30px;
-
-    &:nth-last-of-type(6n) {
-      margin-left: 0;
     }
   }
   .clients-list {

@@ -1,15 +1,19 @@
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-@include for-size(phone) {
+@include for-size(desktop) {
   .advantages {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 .advantages-list {
   display: flex;
+
+  @include for-size(tablet) {
+    flex-wrap: wrap;
+  }
 }
 
 @include for-size(phone) {
@@ -64,6 +68,23 @@
     }
   }
 }
+
+@include for-size(tablet) {
+  .advantages-item {
+    width: calc((100% - 30px) / 2);
+
+    margin-bottom: 30px;
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+    &:nth-last-of-type(2) {
+      margin-bottom: 0;
+    }
+  }
+}
 .advantages-description {
   text-align: left;
   margin: 0;
@@ -71,15 +92,21 @@
 .advantages-icon {
   background-color: $secondary-bg-color;
   border-radius: 4px;
-}
-@include for-size(desktop) {
-  .advantages-icon {
-    @include centeredFlex(inline-flex);
 
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+  }
+
+  @include for-size(desktop) {
+    @include centeredFlex(inline-flex);
     height: 120px;
     width: 270px;
   }
 }
+
 @include for-size(phone) {
   .advantages-icon {
     display: block;

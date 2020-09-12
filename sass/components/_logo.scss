@@ -2,24 +2,29 @@
   color: $title-text-color;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   text-decoration: none;
 
   &:hover,
   &:focus {
     color: $accent-color;
   }
+  @include for-size(tablet) {
+    margin-right: 88px;
+  }
 }
+
 .logo-accent {
   color: $accent-color;
 }
+
 .footer-logo {
   color: $most-view-text-color;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   text-decoration: none;
 
   &:hover,
@@ -27,19 +32,12 @@
     color: $accent-color;
   }
 }
+
 @include for-size(desktop) {
-  .footer-logo {
-    margin-right: 85px;
-  }
+  .footer-logo,
   .logo {
     margin-right: 85px;
-  }
-}
-
-@include for-size(phone) {
-  .logo,
-  .footer-logo {
-    font-size: 24px;
-    line-height: 1.17;
+    font-size: 26px;
+    line-height: 1.19;
   }
 }

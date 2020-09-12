@@ -13,6 +13,21 @@
   position: relative;
 }
 
+@include for-size(tablet) {
+  .site-nav {
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
+    a {
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+}
+
 @include for-size(desktop) {
   .site-nav {
     .item:not(:last-child) {

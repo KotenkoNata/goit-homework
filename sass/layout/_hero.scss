@@ -95,11 +95,13 @@
   + a {
     align-items: center;
   }
-}
 
-@include for-size(phone) {
-  .hero-title {
+  @include for-size(phone) {
     font-size: 25px;
+    line-height: 1.62;
+  }
+  @include for-size(tablet) {
+    font-size: 26px;
     line-height: 1.62;
   }
 }

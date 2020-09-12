@@ -4,20 +4,23 @@ footer {
   padding-bottom: 60px;
 }
 
-@include for-size(phone) {
-  .footer {
+.footer {
+  @include for-size(phone) {
     display: block;
     text-align: center;
   }
-  .third-block {
-    display: inline-block;
-    margin: 0;
-    width: 100%;
-  }
-  .second-block b {
+
+  @include for-size(tablet) {
+    padding-left: 76px;
+    padding-right: 76px;
     text-align: center;
   }
+  @include for-size(desktop) {
+    display: flex;
+    align-items: baseline;
+  }
 }
+
 .clients-list .second-block {
   margin-left: 70px;
   margin-top: 12px;
@@ -27,8 +30,18 @@ footer {
     display: block;
   }
 }
-@include for-size(desktop) {
-  .third-block {
+.second-block b {
+  @include for-size(phone) {
+    text-align: center;
+  }
+  @include for-size(tablet) {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.third-block {
+  @include for-size(desktop) {
     width: calc(50% - 15px);
     margin-left: 15px;
     margin-top: 12px;
@@ -39,16 +52,30 @@ footer {
       margin-bottom: 20px;
     }
   }
-  .footer {
-    display: flex;
-    align-items: baseline;
+
+  @include for-size(phone) {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
   }
-  .footer-form {
-    display: flex;
+
+  @include for-size(tablet) {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+
+    b {
+      display: block;
+      margin-bottom: 20px;
+      margin-top: 60px;
+    }
   }
-  .footer-input {
-    margin-right: 12px;
-    width: 358px;
+}
+.footer-form {
+  display: block;
+
+  @include for-size(desktop) {
+    display: flex;
   }
 }
 
@@ -70,13 +97,40 @@ footer {
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
   }
-}
 
-@include for-size(phone) {
-  .footer-input {
+  @include for-size(desktop) {
+    margin-right: 12px;
+    width: 358px;
+  }
+
+  @include for-size(tablet) {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @include for-size(phone) {
     width: 100%;
     max-width: 450px;
     margin-bottom: 20px;
     margin-top: 20px;
+  }
+}
+
+.footer-tablet-align {
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+}
+.first-block {
+  @include for-size(tablet) {
+    justify-content: flex-start;
+  }
+}
+.second-block {
+  @include for-size(tablet) {
+    justify-content: flex-end;
   }
 }
