@@ -9,6 +9,7 @@
 }
 .works-list {
   display: flex;
+
   @media (min-width: 1200px) {
     justify-content: center;
     margin-bottom: 50px;
