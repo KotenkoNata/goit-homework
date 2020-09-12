@@ -1,9 +1,14 @@
+@import "../components/header_phone_modal";
 .main-nav,
 .header {
   align-items: center;
   display: flex;
 }
-
+.header {
+  @media screen and (max-width: 480px) {
+    justify-content: space-between;
+  }
+}
 .site-nav {
   display: flex;
 
