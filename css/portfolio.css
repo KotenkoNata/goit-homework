@@ -186,6 +186,12 @@ summary {
   font-style: normal;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   color: #757575;
   background-color: #ffffff;
@@ -294,6 +300,14 @@ b {
   }
 }
 
+@media (max-width: 767px) {
+  header,
+  main,
+  footer {
+    min-width: 480px;
+  }
+}
+
 .logo {
   color: #212121;
   font-family: "Raleway";
@@ -340,6 +354,12 @@ b {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  .phone-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
   .phone-menu {
     display: none;
   }
@@ -907,10 +927,6 @@ b {
   .social-item:nth-child(4n) {
     margin-right: 32px;
   }
-  a {
-    display: block;
-    padding: 12px;
-  }
 }
 
 .social-icons-link {
@@ -948,6 +964,7 @@ b {
   .footer-social-item {
     width: calc((100% - 30px) / 4);
     margin-top: 20px;
+    margin-right: 10px;
   }
   .footer-social-item:nth-child(4n) {
     margin-right: 0;
@@ -989,13 +1006,16 @@ b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 @media (max-width: 767px) {
   .footer-social-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 20px;
     margin-bottom: 60px;
   }
@@ -1061,6 +1081,14 @@ footer {
   padding-bottom: 60px;
 }
 
+@media (min-width: 1200px) {
+  footer {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
 @media (max-width: 767px) {
   .footer {
     display: block;
@@ -1107,6 +1135,12 @@ footer {
   .second-block b {
     display: block;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .second-block b {
+    display: block;
   }
 }
 
@@ -1219,11 +1253,21 @@ footer {
   }
 }
 
+.footer-tablet-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .footer-tablet-align {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1199px) {
   .footer-tablet-align {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1244,6 +1288,14 @@ footer {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .second-block {
+    margin-left: 70px;
+    margin-top: 12px;
+    margin-right: 70px;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */

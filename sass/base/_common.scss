@@ -1,6 +1,9 @@
-// * {
-//   border: 1px solid green;
-// }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   color: $primary-text-color;
   background-color: $primary-bg-color;
@@ -76,12 +79,20 @@ b {
   padding-right: 15px;
 
   @include for-size(phone) {
-    width: 480px;
+    width: $phone-width;
   }
   @include for-size(tablet) {
-    width: 768px;
+    width: $tablet-width;
   }
   @include for-size(desktop) {
-    width: 1200px;
+    width: $desktop-width;
+  }
+}
+
+header,
+main,
+footer {
+  @include for-size(phone) {
+    min-width: $phone-width;
   }
 }

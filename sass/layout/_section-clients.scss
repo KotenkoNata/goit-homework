@@ -93,7 +93,6 @@
   .clients-item {
     @include centeredFlex(inline-flex);
 
-    border: 1px solid $border-color-clients;
     box-sizing: border-box;
     border-radius: 4px;
     width: 170px;

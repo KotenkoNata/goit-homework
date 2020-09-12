@@ -2,6 +2,10 @@ footer {
   background-color: $footer-bg-color;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    align-items: baseline;
+  }
 }
 
 .footer {
@@ -37,6 +41,9 @@ footer {
   @include for-size(tablet) {
     display: block;
     margin-bottom: 20px;
+  }
+  @include for-size(desktop) {
+    display: block;
   }
 }
 
@@ -118,8 +125,14 @@ footer {
 }
 
 .footer-tablet-align {
+  display: flex;
+  text-align: center;
+
+  @include for-size(phone) {
+    display: block;
+  }
+
   @include for-size(tablet) {
-    display: flex;
     justify-content: space-between;
     text-align: center;
   }
@@ -132,5 +145,10 @@ footer {
 .second-block {
   @include for-size(tablet) {
     justify-content: flex-end;
+  }
+  @include for-size(desktop) {
+    margin-left: 70px;
+    margin-top: 12px;
+    margin-right: 70px;
   }
 }
