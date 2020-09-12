@@ -11,9 +11,6 @@
 
   opacity: 1;
   transition-property: opacity;
-
-  @media (max-width: 480px) {
-  }
 }
 
 .modal {
@@ -47,7 +44,7 @@
     transform: translate(-50%, -50%) scale(0.8);
   }
 
-  @media (max-width: 480px) {
+  @include for-size(phone) {
     max-width: 450px;
     text-align: center;
 

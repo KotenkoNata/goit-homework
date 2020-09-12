@@ -214,7 +214,7 @@ header {
   border: 1px solid #ececec;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   header {
     border: none;
   }
@@ -240,7 +240,7 @@ header {
   margin-bottom: 50px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .section-title {
     font-size: 28px;
     line-height: 1.18;
@@ -261,33 +261,27 @@ b {
   text-transform: uppercase;
 }
 
-.container,
-.header,
-.footer {
+.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-@media (max-width: 480px) {
-  .container,
-  .header,
-  .footer {
+@media (max-width: 767px) {
+  .container {
     width: 480px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .container {
     width: 768px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container,
-  .header,
-  .footer {
+  .container {
     width: 1200px;
   }
 }
@@ -331,7 +325,7 @@ b {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .logo,
   .footer-logo {
     font-size: 24px;
@@ -349,7 +343,7 @@ b {
   background-color: transparent;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .menu-button {
     display: none;
   }
@@ -381,20 +375,21 @@ b {
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .menu-container {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
+    z-index: 6;
   }
   .menu-container.is-open {
     display: block;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .menu-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -422,7 +417,7 @@ b {
   position: relative;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 767px) {
   .header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -466,7 +461,7 @@ b {
   color: #2196f3;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .site-nav {
     display: none;
   }
@@ -502,7 +497,7 @@ b {
   border-radius: 2px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .site-nav-link::after {
     bottom: -8px;
   }
@@ -552,7 +547,7 @@ b {
   margin-right: 10px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .header-contact {
     display: none;
     text-align: center;
@@ -659,6 +654,7 @@ b {
 .hero {
   text-align: center;
   max-width: 1600px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
@@ -668,7 +664,7 @@ b {
   background-position: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .hero {
     height: 400px;
     padding-top: 118px;
@@ -678,7 +674,7 @@ b {
   }
 }
 
-@media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url(./../images/optimaze/herophone2@.jpg);
   }
@@ -700,7 +696,7 @@ b {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .hero {
     height: 400px;
     padding-top: 118px;
@@ -710,7 +706,7 @@ b {
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url(./../images/optimaze/herotablet2@.jpg);
   }
@@ -733,7 +729,7 @@ b {
           align-items: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .hero-title {
     font-size: 25px;
     line-height: 1.62;
@@ -745,7 +741,7 @@ b {
   padding-bottom: 94px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .advantages {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -758,7 +754,7 @@ b {
   display: flex;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .advantages-list {
     display: block;
   }
@@ -838,7 +834,7 @@ b {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .advantages-icon {
     display: block;
     max-width: 100%;
@@ -852,7 +848,7 @@ b {
   padding-bottom: 94px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .what-doing {
     display: none;
   }
@@ -898,7 +894,7 @@ b {
   padding-bottom: 94px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .team {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -918,7 +914,7 @@ b {
   display: flex;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .members-list {
     display: block;
   }
@@ -1079,7 +1075,14 @@ p {
           justify-content: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
+  .footer-social-list {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
   .clients {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -1119,7 +1122,7 @@ p {
   display: flex;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .clients-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1208,7 +1211,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .footer-contact {
     text-align: center;
   }
@@ -1232,7 +1235,7 @@ footer {
   padding-bottom: 60px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .footer {
     display: block;
     text-align: center;
@@ -1326,7 +1329,7 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .footer-input {
     width: 100%;
     max-width: 450px;
@@ -1347,7 +1350,7 @@ footer {
           flex-direction: column;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .form-field {
     text-align: left;
     font-size: 12px;
@@ -1372,7 +1375,7 @@ footer {
   margin-bottom: 30px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .form-checkbox {
     padding: 0;
   }
@@ -1493,7 +1496,7 @@ footer {
           transform: translate(-50%, -50%) scale(0.8);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .modal {
     max-width: 450px;
     text-align: center;

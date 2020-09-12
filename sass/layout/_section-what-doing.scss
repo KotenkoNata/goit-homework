@@ -2,7 +2,7 @@
   padding-bottom: 94px;
 }
 
-@media (max-width: 480px) {
+@include for-size(phone) {
   .what-doing {
     display: none;
   }

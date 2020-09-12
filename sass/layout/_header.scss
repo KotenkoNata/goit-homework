@@ -5,7 +5,7 @@
   display: flex;
 }
 .header {
-  @media screen and (max-width: 480px) {
+  @include for-size(phone) {
     justify-content: space-between;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -13,7 +13,7 @@
   position: relative;
 }
 
-@media (min-width: 1200px) {
+@include for-size(desktop) {
   .site-nav {
     .item:not(:last-child) {
       margin-right: 50px;
@@ -46,7 +46,7 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @include for-size(phone) {
     display: none;
 
     .menu-container & {
@@ -84,7 +84,7 @@
     background-color: $accent-color;
     border-radius: 2px;
   }
-  @media (max-width: 480px) {
+  @include for-size(phone) {
     &::after {
       bottom: -8px;
     }

@@ -214,7 +214,7 @@ header {
   border: 1px solid #ececec;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   header {
     border: none;
   }
@@ -240,7 +240,7 @@ header {
   margin-bottom: 50px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .section-title {
     font-size: 28px;
     line-height: 1.18;
@@ -261,33 +261,27 @@ b {
   text-transform: uppercase;
 }
 
-.container,
-.header,
-.footer {
+.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-@media (max-width: 480px) {
-  .container,
-  .header,
-  .footer {
+@media (max-width: 767px) {
+  .container {
     width: 480px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .container {
     width: 768px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container,
-  .header,
-  .footer {
+  .container {
     width: 1200px;
   }
 }
@@ -331,7 +325,7 @@ b {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .logo,
   .footer-logo {
     font-size: 24px;
@@ -349,7 +343,7 @@ b {
   background-color: transparent;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .menu-button {
     display: none;
   }
@@ -381,20 +375,21 @@ b {
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .menu-container {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
+    z-index: 6;
   }
   .menu-container.is-open {
     display: block;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .menu-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -422,7 +417,7 @@ b {
   position: relative;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 767px) {
   .header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -466,7 +461,7 @@ b {
   color: #2196f3;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .site-nav {
     display: none;
   }
@@ -502,7 +497,7 @@ b {
   border-radius: 2px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .site-nav-link::after {
     bottom: -8px;
   }
@@ -552,7 +547,7 @@ b {
   margin-right: 10px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .header-contact {
     display: none;
     text-align: center;
@@ -661,7 +656,7 @@ b {
   padding-bottom: 94px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .main-content {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -683,7 +678,7 @@ b {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .works-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -701,13 +696,13 @@ b {
   margin-right: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .works-item {
     margin-bottom: 15px;
   }
 }
 
-@media (min-width: 1200) {
+@media (min-width: 1200px) {
   .gallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -731,7 +726,7 @@ b {
   margin: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .gallery h3 {
     display: block;
   }
@@ -754,7 +749,7 @@ b {
   margin-bottom: 30px;
 }
 
-@media (min-width: 1200) {
+@media (min-width: 1200px) {
   .gallery .gallery-list {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
@@ -772,13 +767,13 @@ b {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .gallery .gallery-list:nth-child(9n) {
     margin-bottom: 0;
   }
 }
 
-@media (max-width: 480) {
+@media (max-width: 767px) {
   .gallery-list {
     width: 100%;
   }
@@ -953,6 +948,13 @@ b {
           justify-content: center;
 }
 
+@media (max-width: 767px) {
+  .footer-social-list {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
+
 .footer-contact .adress {
   font-weight: 400;
   color: #ffffff;
@@ -984,7 +986,7 @@ b {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .footer-contact {
     text-align: center;
   }
@@ -1008,7 +1010,7 @@ footer {
   padding-bottom: 60px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .footer {
     display: block;
     text-align: center;
@@ -1102,7 +1104,7 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .footer-input {
     width: 100%;
     max-width: 450px;

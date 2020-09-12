@@ -1,5 +1,5 @@
 .gallery {
-  @media (min-width: 1200) {
+  @include for-size(desktop) {
     display: flex;
 
     flex-wrap: wrap;
@@ -17,7 +17,7 @@
     color: $title-text-color;
     margin: 0;
 
-    @media (max-width: 480px) {
+    @include for-size(phone) {
       display: block;
     }
   }
@@ -39,7 +39,7 @@
 .gallery .gallery-list {
   margin-bottom: 30px;
 
-  @media (min-width: 1200) {
+  @include for-size(desktop) {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
 
@@ -56,14 +56,14 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
-  @media (max-width: 480px) {
+  @include for-size(phone) {
     &:nth-child(9n) {
       margin-bottom: 0;
     }
   }
 }
 
-@media (max-width: 480) {
+@include for-size(phone) {
   .gallery-list {
     width: 100%;
   }

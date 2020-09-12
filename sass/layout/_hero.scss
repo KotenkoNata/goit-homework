@@ -2,6 +2,7 @@
   text-align: center;
 
   max-width: 1600px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -15,9 +16,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width: 480px) {
+@include for-size(phone) {
   .hero {
     height: 400px;
+
     padding-top: 118px;
     padding-bottom: 118px;
 
@@ -37,7 +39,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@include for-size(desktop) {
   .hero {
     height: 600px;
     padding-top: 200px;
@@ -59,7 +61,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@include for-size(tablet) {
   .hero {
     height: 400px;
     padding-top: 118px;
@@ -95,7 +97,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@include for-size(phone) {
   .hero-title {
     font-size: 25px;
     line-height: 1.62;

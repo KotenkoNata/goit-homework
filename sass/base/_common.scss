@@ -24,13 +24,12 @@ body.modal-open {
 }
 header {
   border: 1px solid $header-color;
-}
 
-@media (max-width: 480px) {
-  header {
+  @include for-size(phone) {
     border: none;
   }
 }
+
 .animation {
   transition-duration: 250ms;
   transition-timing-function: $timing-function;
@@ -45,7 +44,7 @@ header {
   margin-bottom: 50px;
 }
 
-@media (max-width: 480px) {
+@include for-size(phone) {
   .section-title {
     font-size: 28px;
     line-height: 1.18;
@@ -64,32 +63,19 @@ b {
   text-transform: uppercase;
 }
 
-.container,
-.header,
-.footer {
+.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media (max-width: 480px) {
-  .container,
-  .header,
-  .footer {
+
+  @include for-size(phone) {
     width: 480px;
   }
-}
-
-@media (min-width: 768px) {
-  .container {
+  @include for-size(tablet) {
     width: 768px;
   }
-}
-
-@media (min-width: 1200px) {
-  .container,
-  .header,
-  .footer {
+  @include for-size(desktop) {
     width: 1200px;
   }
 }

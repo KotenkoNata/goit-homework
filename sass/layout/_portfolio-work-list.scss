@@ -2,7 +2,7 @@
   padding-top: 94px;
   padding-bottom: 94px;
 
-  @media (max-width: 480px) {
+  @include for-size(phone) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -10,12 +10,12 @@
 .works-list {
   display: flex;
 
-  @media (min-width: 1200px) {
+  @include for-size(desktop) {
     justify-content: center;
     margin-bottom: 50px;
   }
 
-  @media (max-width: 480px) {
+  @include for-size(phone) {
     flex-flow: row wrap;
     margin-bottom: 40px;
   }
@@ -27,7 +27,7 @@
     margin-right: 0;
   }
 
-  @media (max-width: 480px) {
+  @include for-size(phone) {
     margin-bottom: 15px;
   }
 }

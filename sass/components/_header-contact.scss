@@ -1,4 +1,4 @@
-@media (min-width: 1200px) {
+@include for-size(desktop) {
   .header-contact-link {
     display: flex;
   }
@@ -31,7 +31,7 @@
   > .item img {
     margin-right: 10px;
   }
-  @media (max-width: 480px) {
+  @include for-size(phone) {
     display: none;
 
     .menu-container & {

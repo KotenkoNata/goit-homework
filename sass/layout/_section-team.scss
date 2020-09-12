@@ -4,7 +4,7 @@
   padding-bottom: 94px;
 }
 
-@media (max-width: 480px) {
+@include for-size(phone) {
   .team {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -23,7 +23,7 @@
   display: flex;
 }
 
-@media (max-width: 480px) {
+@include for-size(phone) {
   .members-list {
     display: block;
   }
@@ -42,7 +42,7 @@
   margin-bottom: 16px;
 }
 
-@media (min-width: 1200px) {
+@include for-size(desktop) {
   .members {
     width: calc((100% - 90px) / 4);
     margin-right: 30px;

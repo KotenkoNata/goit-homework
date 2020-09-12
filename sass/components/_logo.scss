@@ -27,7 +27,7 @@
     color: $accent-color;
   }
 }
-@media (min-width: 1200px) {
+@include for-size(desktop) {
   .footer-logo {
     margin-right: 85px;
   }
@@ -36,7 +36,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@include for-size(phone) {
   .logo,
   .footer-logo {
     font-size: 24px;

@@ -11,7 +11,7 @@
 .social-item:not(:last-child) {
   margin-right: 10px;
 }
-@media (min-width: 1200px) {
+@include for-size(desktop) {
   .social-item {
     width: calc((100% - 94px) / 4);
 
@@ -56,7 +56,7 @@
     fill: $primary-bg-color;
   }
 }
-@media (min-width: 1200px) {
+@include for-size(desktop) {
   .footer-social-item {
     width: calc((100% - 30px) / 4);
 
@@ -100,7 +100,7 @@
   justify-content: center;
 }
 
-@include for-size(phone-only) {
+@include for-size(phone) {
   .footer-social-list {
     margin-top: 20px;
     margin-bottom: 60px;
