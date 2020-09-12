@@ -343,8 +343,8 @@ b {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  padding: 10px;
   margin: 0;
-  padding: 0;
   border: none;
   background-color: transparent;
 }
@@ -367,6 +367,10 @@ b {
   display: none;
 }
 
+.menu-button:hover, .menu-button:focus {
+  fill: #2196f3;
+}
+
 .main-nav,
 .header {
   -webkit-box-align: center;
@@ -382,6 +386,8 @@ b {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
