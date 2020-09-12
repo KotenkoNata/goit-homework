@@ -64,33 +64,32 @@ b {
   text-transform: uppercase;
 }
 
-.footer,
-.container {
+.container,
+.header,
+.footer {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
+  .container,
   .header,
-  .footer,
-  .container {
+  .footer {
     width: 480px;
   }
 }
 
 @media (min-width: 768px) {
-  .header,
-  .footer,
   .container {
     width: 768px;
   }
 }
 
 @media (min-width: 1200px) {
+  .container,
   .header,
-  .footer,
-  .container {
+  .footer {
     width: 1200px;
   }
 }

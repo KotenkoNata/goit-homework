@@ -31,6 +31,9 @@
   > .item img {
     margin-right: 10px;
   }
+  @media (max-width: 480px) {
+    display: none;
+  }
 }
 
 .header-contact-icon {
@@ -52,27 +55,4 @@
 .header-contact-link:hover,
 .header-contact-link:focus {
   color: $accent-color;
-}
-
-@media (max-width: 480px) {
-  .header-contact {
-    display: block;
-    text-align: center;
-
-    a {
-      font-size: 18px;
-      line-height: 1.17;
-      display: block;
-    }
-    .item {
-      margin-bottom: 16px;
-
-      &:last-child {
-        margin-bottom: 60px;
-      }
-    }
-  }
-  .header-phone-contact {
-    text-align: center;
-  }
 }
