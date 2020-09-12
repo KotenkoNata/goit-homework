@@ -1,3 +1,9 @@
+@include for-size(tablet) {
+  .phone-menu {
+    display: none;
+  }
+}
+
 .menu-button {
   display: inline-flex;
 
@@ -6,10 +12,6 @@
 
   border: none;
   background-color: transparent;
-
-  @include for-size(tablet) {
-    display: none;
-  }
 
   .icon-cross {
     display: none;
@@ -53,9 +55,9 @@
     z-index: 6;
   }
 
-  @include for-size(tablet) {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-  }
+  // @include for-size(tablet) {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   flex-grow: 1;
+  // }
 }
