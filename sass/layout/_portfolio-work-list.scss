@@ -1,23 +1,26 @@
 .main-content {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  @include for-size(phone) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 .works-list {
   display: flex;
+  justify-content: center;
 
   @include for-size(desktop) {
-    justify-content: center;
     margin-bottom: 50px;
   }
 
   @include for-size(phone) {
     flex-flow: row wrap;
     margin-bottom: 40px;
+  }
+  @include for-size(tablet) {
+    margin-bottom: 30px;
   }
 }
 .works-item {

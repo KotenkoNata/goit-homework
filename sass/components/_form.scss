@@ -10,6 +10,12 @@
     font-size: 12px;
     line-height: 1.17;
   }
+  @include for-size(tablet) {
+    text-align: left;
+    font-size: 12px;
+    ine-height: 1.16;
+  }
+
   a {
     color: $accent-color;
   }
@@ -19,13 +25,13 @@
 }
 
 .form-checkbox {
-  padding-left: 11px;
-  padding-right: 11px;
+  padding: 0;
   align-items: center;
   margin-bottom: 30px;
 
-  @include for-size(phone) {
-    padding: 0;
+  @include for-size(desktop) {
+    padding-left: 11px;
+    padding-right: 11px;
   }
 }
 .form-input {

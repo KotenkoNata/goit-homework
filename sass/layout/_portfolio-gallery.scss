@@ -1,9 +1,7 @@
 .gallery {
-  @include for-size(desktop) {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
 
-    flex-wrap: wrap;
-  }
   a {
     text-decoration: none;
     color: inherit;
@@ -58,6 +56,17 @@
 
   @include for-size(phone) {
     &:nth-child(9n) {
+      margin-bottom: 0;
+    }
+  }
+  @include for-size(tablet) {
+    width: calc((100% - 30px) / 2);
+    margin-left: 30px;
+
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
+    &:nth-last-child(1) {
       margin-bottom: 0;
     }
   }

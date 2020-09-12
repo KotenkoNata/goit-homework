@@ -19,12 +19,12 @@
 
             <ul class="site-nav list">
               <li class="item">
-                <a href="" class="link current site-nav-link animation"
-                  >Студия</a
-                >
+                <a href="" class="link site-nav-link animation">Студия</a>
               </li>
               <li class="item">
-                <a href="./portfolio.html" class="animation">Портфолио</a>
+                <a href="./portfolio.html" class="animation current link"
+                  >Портфолио</a
+                >
               </li>
               <li class="item"><a href="" class="animation">Контакты</a></li>
             </ul>
@@ -59,75 +59,76 @@
             </li>
           </ul>
           <!-- Мобильное меню -->
-
-          <button
-            type="button"
-            class="menu-button animation"
-            aria-expanded="false"
-            aria-controls="menu-container"
-            data-menu-button
-          >
-            <svg
-              width="20"
-              height="20"
-              aria-label="Переключатель мобильного меню"
+          <div class="phone-menu">
+            <button
+              type="button"
+              class="menu-button animation"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
             >
-              <use
-                class="icon-cross"
-                href="./images/symbol-defs.svg#icon-close_24px"
-              ></use>
-              <use
-                class="icon-menu"
-                href="./images/symbol-defs.svg#icon-menu_24px"
-              ></use>
-            </svg>
-          </button>
+              <svg
+                width="20"
+                height="20"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  class="icon-cross"
+                  href="./images/symbol-defs.svg#icon-close_24px"
+                ></use>
+                <use
+                  class="icon-menu"
+                  href="./images/symbol-defs.svg#icon-menu_24px"
+                ></use>
+              </svg>
+            </button>
 
-          <div class="menu-container" id="menu-container" data-menu>
-            <ul class="site-nav list">
-              <li class="item">
-                <a href="" class="link site-nav-link animation">Студия</a>
-              </li>
-              <li class="item">
-                <a href="./portfolio.html" class="animation current"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="item"><a href="" class="animation">Контакты</a></li>
-            </ul>
+            <div class="menu-container" id="menu-container" data-menu>
+              <ul class="site-nav list">
+                <li class="item">
+                  <a href="" class="link site-nav-link animation">Студия</a>
+                </li>
+                <li class="item">
+                  <a href="./portfolio.html" class="animation">Портфолио</a>
+                </li>
+                <li class="item"><a href="" class="animation">Контакты</a></li>
+              </ul>
 
-            <ul class="list header-contact">
-              <li class="item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="header-contact-link flexbox animation"
-                >
-                  <svg
-                    class="header-contact-icon animation"
-                    width="16"
-                    height="11.2"
+              <ul class="list header-contact">
+                <li class="item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="header-contact-link flexbox animation"
                   >
-                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
-                  </svg>
-                  info@devstudio.com
-                </a>
-              </li>
-              <li class="item">
-                <a
-                  href="tel:+380961111111"
-                  class="header-contact-link animation"
-                >
-                  <svg
-                    class="header-contact-icon animation"
-                    width="10"
-                    height="14.94"
+                    <svg
+                      class="header-contact-icon animation"
+                      width="16"
+                      height="11.2"
+                    >
+                      <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="item">
+                  <a
+                    href="tel:+380961111111"
+                    class="header-contact-link animation"
                   >
-                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                  </svg>
-                  +38 096 111 11 11
-                </a>
-              </li>
-            </ul>
+                    <svg
+                      class="header-contact-icon animation"
+                      width="10"
+                      height="14.94"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-smartphone"
+                      ></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -252,7 +253,7 @@
                   </div>
                 </div>
                 <div class="gallery-title">
-                  <h3>Постер New Orlean vs Golden Star</h3>
+                  <h3>Постер New Orlean vs Golden</h3>
                   <p class="lead">Дизайн</p>
                 </div>
               </a>
@@ -585,80 +586,86 @@
     </main>
     <footer>
       <!-- Футер -->
-      <div class="footer">
-        <div class="first-block">
-          <a href="/" class="footer-logo animation">
-            <span class="logo-accent">Web</span> Studio
-          </a>
-          <address>
-            <ul class="list footer-contact">
-              <li>
-                <p class="adress">г. Киев, пр-т Леси Украинки, 26<br /></p>
-              </li>
-              <li class="footer-contact">
-                <a href="mailto:info@example.com">info@example.com<br /> </a>
-              </li>
-              <li class="footer-contact">
-                <a href="tel:+380991111111">+38 099 111 11 11<br /> </a>
-              </li>
-            </ul>
-          </address>
-        </div>
-
-        <div class="second-block">
-          <b> присоединяйтесь </b>
-          <ul class="list footer-social-list">
-            <li class="footer-social-item f-icon-instagram animation">
-              <a href="Instagram" aria-label="Ссылка на Instagram">
-                <svg class="footer-social-icon" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
+      <div class="container">
+        <div class="footer">
+          <div class="footer-tablet-align">
+            <div class="first-block">
+              <a href="/" class="footer-logo animation">
+                <span class="logo-accent">Web</span> Studio
               </a>
-            </li>
-            <li class="footer-social-item f-icon-twitter animation">
-              <a href="Twitter" aria-label="Ссылка на Twitter">
-                <svg class="footer-social-icon" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item f-icon-facebook animation">
-              <a href="Facebook" aria-label="Ссылка на Facebook">
-                <svg class="footer-social-icon" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item f-icon-linked animation">
-              <a href="LinkedIn" aria-label="Ссылка на LinkedIn">
-                <svg class="footer-social-icon" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="third-block">
-          <b> Подпишитесь на рассылку </b>
-          <div class="footer-form">
-            <div class="email-field">
-              <input
-                class="footer-input animation"
-                type="email"
-                name="mail"
-                id="mail"
-                placeholder="E-mail"
-              />
+              <address>
+                <ul class="list footer-contact">
+                  <li>
+                    <p class="adress">г. Киев, пр-т Леси Украинки, 26<br /></p>
+                  </li>
+                  <li class="footer-contact">
+                    <a href="mailto:info@example.com"
+                      >info@example.com<br />
+                    </a>
+                  </li>
+                  <li class="footer-contact">
+                    <a href="tel:+380991111111">+38 099 111 11 11<br /> </a>
+                  </li>
+                </ul>
+              </address>
             </div>
 
-            <div class="subscribe">
-              <button class="button footer-button primary">
-                Подписаться
+            <div class="second-block">
+              <b> присоединяйтесь </b>
+              <ul class="list footer-social-list">
+                <li class="footer-social-item f-icon-instagram animation">
+                  <a href="Instagram" aria-label="Ссылка на Instagram">
+                    <svg class="footer-social-icon" width="20px" height="20px">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item f-icon-twitter animation">
+                  <a href="Twitter" aria-label="Ссылка на Twitter">
+                    <svg class="footer-social-icon" width="20px" height="20px">
+                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item f-icon-facebook animation">
+                  <a href="Facebook" aria-label="Ссылка на Facebook">
+                    <svg class="footer-social-icon" width="20px" height="20px">
+                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item f-icon-linked animation">
+                  <a href="LinkedIn" aria-label="Ссылка на LinkedIn">
+                    <svg class="footer-social-icon" width="20px" height="20px">
+                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="third-block">
+            <b> Подпишитесь на рассылку </b>
+            <div class="footer-form">
+              <div class="email-field">
+                <input
+                  class="footer-input animation"
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  placeholder="E-mail"
+                />
+              </div>
 
-                <svg class="sent-icon" width="24px" height="24px">
-                  <use href="./images/symbol-defs.svg#icon-send"></use>
-                </svg>
-              </button>
+              <div class="subscribe">
+                <button class="button footer-button primary">
+                  Подписаться
+
+                  <svg class="sent-icon" width="24px" height="24px">
+                    <use href="./images/symbol-defs.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
