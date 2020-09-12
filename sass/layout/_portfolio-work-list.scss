@@ -1,17 +1,32 @@
 .main-content {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @media (max-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .works-list {
   display: flex;
+  @media (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 
-  justify-content: center;
-  margin-bottom: 50px;
+  @media (max-width: 480px) {
+    flex-flow: row wrap;
+    margin-bottom: 40px;
+  }
 }
 .works-item {
   margin-right: 8px;
 
   &:nth-child(5n) {
     margin-right: 0;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 15px;
   }
 }
