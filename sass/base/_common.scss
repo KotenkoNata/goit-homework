@@ -75,20 +75,17 @@ b {
   padding-right: 15px;
 
   @include for-size(phone) {
-    width: $phone-width;
+    max-width: $phone-width;
   }
   @include for-size(tablet) {
-    width: $tablet-width;
+    max-width: $tablet-width;
   }
   @include for-size(desktop) {
-    width: $desktop-width;
+    max-width: $desktop-width;
   }
 }
 
 header,
 main,
 footer {
-  @include for-size(phone) {
-    min-width: $phone-width;
-  }
 }
