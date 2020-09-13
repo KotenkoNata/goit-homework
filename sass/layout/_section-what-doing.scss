@@ -1,5 +1,16 @@
 .what-doing {
   padding-bottom: 94px;
+
+  @include for-size(phone) {
+    display: none;
+  }
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.what-doing-list {
+  display: flex;
 }
 
 .what-doing-item {

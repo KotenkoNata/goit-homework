@@ -4,58 +4,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Studio</title>
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="./css/portfolio.min.css" />
   </head>
 
   <body>
     <header>
-      <!-- Шапка сайта -->
-      <div class="header flexbox">
-        <nav class="main-nav flexbox">
-          <a href="./index.html" class="logo animation">
-            <span class="logo-accent">Web</span> Studio
-          </a>
+      <div class="container">
+        <div class="header">
+          <!-- Шапка сайта -->
+          <nav class="main-nav">
+            <a href="./" class="logo animation">
+              <span class="logo-accent">Web</span> Studio
+            </a>
 
-          <ul class="site-nav list flexbox">
+            <ul class="site-nav list">
+              <li class="item">
+                <a href="./index.html" class="link animation">Студия</a>
+              </li>
+              <li class="item">
+                <a
+                  href="./portfolio.html"
+                  class="animation site-nav-link current link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="item"><a href="#none" class="animation">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="list header-contact">
             <li class="item">
-              <a class="animation" href="./index.html">Студия</a>
-            </li>
-            <li class="item">
-              <a href="" class="link current site-nav-link animation"
-                >Портфолио</a
+              <a
+                href="mailto:info@devstudio.com"
+                class="header-contact-link flexbox animation"
               >
+                <svg
+                  class="header-contact-icon animation"
+                  width="16"
+                  height="11.2"
+                >
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="item"><a class="animation" href="">Контакты</a></li>
+            <li class="item">
+              <a href="tel:+380961111111" class="header-contact-link animation">
+                <svg
+                  class="header-contact-icon animation"
+                  width="10"
+                  height="14.94"
+                >
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
           </ul>
-        </nav>
-        <ul class="list header-contact flexbox">
-          <li class="item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="header-contact-link flexbox animation"
+          <!-- Мобильное меню -->
+          <div class="phone-menu">
+            <button
+              type="button"
+              class="menu-button animation"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
             >
-              <svg class="header-contact-icon" width="16" height="11.2">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              <svg
+                width="20"
+                height="20"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  class="icon-cross"
+                  href="./images/symbol-defs.svg#icon-close_24px"
+                ></use>
+                <use
+                  class="icon-menu"
+                  href="./images/symbol-defs.svg#icon-menu_24px"
+                ></use>
               </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item">
-            <a
-              href="tel:+380961111111"
-              class="header-contact-link flexbox animation"
-            >
-              <svg class="header-contact-icon" width="10" height="14.94">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+            </button>
+
+            <div class="menu-container" id="menu-container" data-menu>
+              <ul class="site-nav list">
+                <li class="item">
+                  <a href="./index.html" class="link animation">Студия</a>
+                </li>
+                <li class="item">
+                  <a
+                    href="./portfolio.html"
+                    class="animation site-nav-link current"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="item"><a href="#none" class="animation">Контакты</a></li>
+              </ul>
+
+              <ul class="list header-contact">
+                <li class="item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="header-contact-link flexbox animation"
+                  >
+                    <svg
+                      class="header-contact-icon animation"
+                      width="16"
+                      height="11.2"
+                    >
+                      <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="item">
+                  <a
+                    href="tel:+380961111111"
+                    class="header-contact-link animation"
+                  >
+                    <svg
+                      class="header-contact-icon animation"
+                      width="10"
+                      height="14.94"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-smartphone"
+                      ></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -63,7 +144,7 @@
         <div class="container main-part">
           <!-- Категории -->
           <h1 hidden>Наши работы</h1>
-          <ul class="list flexbox works-list">
+          <ul class="list works-list">
             <li class="works-item">
               <button type="button" class="filtr-button animation">Все</button>
             </li>
@@ -89,16 +170,37 @@
             </li>
           </ul>
           <h2 hidden>Примеры работ</h2>
-          <ul class="gallery flexbox list work-exemple">
+          <ul class="gallery list work-exemple">
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf1desktop.jpg   1x,
+                        ./images/optimaze/portf1desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf1tablet.jpg   1x,
+                        ./images/optimaze/portf1tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf1phone.jpg   1x,
+                        ./images/optimaze/portf1phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf1desktop.jpg"
+                      alt="Ноутбук"
+                    />
+                  </picture>
 
                   <div class="hover-text animation">
                     <p class="excerpt details">
@@ -118,14 +220,35 @@
             </li>
 
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img2.jpg"
-                    alt="Баскетбольная игра"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf2desktop.jpg   1x,
+                        ./images/optimaze/portf2desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf2tablet.jpg   1x,
+                        ./images/optimaze/portf2tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf2phone.jpg   1x,
+                        ./images/optimaze/portf2phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf2desktop.jpg"
+                      alt="Баскетбольная игра"
+                    />
+                  </picture>
                   <div class="hover-text animation">
                     <p class="excerpt details">
                       Технокряк это современная площадка распространения
@@ -136,20 +259,42 @@
                   </div>
                 </div>
                 <div class="gallery-title">
-                  <h3>Постер New Orlean vs Golden Star</h3>
+                  <h3>Постер New Orlean vs Golden</h3>
                   <p class="lead">Дизайн</p>
                 </div>
               </a>
             </li>
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img3.jpg"
-                    alt="Логотип ресторана Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf3desktop.jpg   1x,
+                        ./images/optimaze/portf3desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf3tablet.jpg   1x,
+                        ./images/optimaze/portf3tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf3phone.jpg   1x,
+                        ./images/optimaze/portf3phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf3desktop.jpg"
+                      alt="Логотип ресторана Seafood"
+                    />
+                  </picture>
+
                   <div class="hover-text animation">
                     <p class="excerpt details">
                       Технокряк это современная площадка распространения
@@ -166,14 +311,36 @@
               </a>
             </li>
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img4.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf4desktop.jpg   1x,
+                        ./images/optimaze/portf4desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf4tablet.jpg   1x,
+                        ./images/optimaze/portf4tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf4phone.jpg   1x,
+                        ./images/optimaze/portf4phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf4desktop.jpg"
+                      alt="Наушники"
+                    />
+                  </picture>
+
                   <div class="hover-text animation">
                     <p class="excerpt details">
                       Технокряк это современная площадка распространения
@@ -190,14 +357,36 @@
               </a>
             </li>
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img5.jpg"
-                    alt="Коробочки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf5desktop.jpg   1x,
+                        ./images/optimaze/portf5desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf5tablet.jpg   1x,
+                        ./images/optimaze/portf5tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf5phone.jpg   1x,
+                        ./images/optimaze/portf5phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf5desktop.jpg"
+                      alt="Коробочки"
+                    />
+                  </picture>
+
                   <div class="hover-text animation">
                     <p class="excerpt details">
                       Технокряк это современная площадка распространения
@@ -214,14 +403,36 @@
               </a>
             </li>
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img6.jpg"
-                    alt="Монитор"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf6desktop.jpg   1x,
+                        ./images/optimaze/portf6desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf6tablet.jpg   1x,
+                        ./images/optimaze/portf6tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf6phone.jpg   1x,
+                        ./images/optimaze/portf6phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf6desktop.jpg"
+                      alt="Монитор"
+                    />
+                  </picture>
+
                   <div class="hover-text animation">
                     <p class="excerpt details">
                       Технокряк это современная площадка распространения
@@ -238,14 +449,36 @@
               </a>
             </li>
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img7.jpg"
-                    alt="Журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf7desktop.jpg   1x,
+                        ./images/optimaze/portf7desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf7tablet.jpg   1x,
+                        ./images/optimaze/portf7tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf7phone.jpg   1x,
+                        ./images/optimaze/portf7phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf7desktop.jpg"
+                      alt="Журнал"
+                    />
+                  </picture>
+
                   <div class="hover-text animation">
                     <p class="excerpt details">
                       Технокряк это современная площадка распространения
@@ -262,14 +495,36 @@
               </a>
             </li>
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img8.jpg"
-                    alt="Этикетка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf8desktop.jpg   1x,
+                        ./images/optimaze/portf8desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf8tablet.jpg   1x,
+                        ./images/optimaze/portf8tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf8phone.jpg   1x,
+                        ./images/optimaze/portf8phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf8desktop.jpg"
+                      alt="Этикетка"
+                    />
+                  </picture>
+
                   <div class="hover-text animation">
                     <p class="excerpt details">
                       Технокряк это современная площадка распространения
@@ -286,14 +541,36 @@
               </a>
             </li>
             <li class="gallery-list animation">
-              <a href="" class="gallery-link">
+              <a href="#none" class="gallery-link">
                 <div class="gallery-relative">
-                  <img
-                    src="./images/portfolio/img9.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/optimaze/portf9desktop.jpg   1x,
+                        ./images/optimaze/portf9desktop2@.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf9tablet.jpg   1x,
+                        ./images/optimaze/portf9tablet2@.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/optimaze/portf9phone.jpg   1x,
+                        ./images/optimaze/portf9phone2@.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/optimaze/portf9desktop.jpg"
+                      alt="Ноутбук"
+                    />
+                  </picture>
+
                   <div class="hover-text animation">
                     <p class="excerpt details">
                       Технокряк это современная площадка распространения
@@ -315,84 +592,91 @@
     </main>
     <footer>
       <!-- Футер -->
-      <div class="footer flexbox">
-        <div class="first-block">
-          <a href="/" class="footer-logo animation">
-            <span class="logo-accent">Web</span> Studio
-          </a>
-          <address>
-            <ul class="list footer-contact">
-              <li>
-                <p class="adress">г. Киев, пр-т Леси Украинки, 26<br /></p>
-              </li>
-              <li class="footer-contact">
-                <a href="mailto:info@example.com">info@example.com<br /> </a>
-              </li>
-              <li class="footer-contact">
-                <a href="tel:+380991111111">+38 099 111 11 11<br /> </a>
-              </li>
-            </ul>
-          </address>
-        </div>
-
-        <div class="second-block">
-          <b> присоединяйтесь </b>
-          <ul class="list footer-social-list flexbox">
-            <li class="footer-social-item f-icon-instagram animation">
-              <a href="Instagram" aria-label="Ссылка на Instagram">
-                <svg class="footer-social-icon" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
+      <div class="container">
+        <div class="footer">
+          <div class="footer-tablet-align">
+            <div class="first-block">
+              <a href="/" class="footer-logo animation">
+                <span class="logo-accent">Web</span> Studio
               </a>
-            </li>
-            <li class="footer-social-item f-icon-twitter animation">
-              <a href="Twitter" aria-label="Ссылка на Twitter">
-                <svg class="footer-social-icon" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item f-icon-facebook animation">
-              <a href="Facebook" aria-label="Ссылка на Facebook">
-                <svg class="footer-social-icon" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item f-icon-linked animation">
-              <a href="LinkedIn" aria-label="Ссылка на LinkedIn">
-                <svg class="footer-social-icon" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="third-block">
-          <b> Подпишитесь на рассылку </b>
-          <div class="footer-form flexbox">
-            <div class="email-field flexbox">
-              <input
-                class="footer-input animation"
-                type="email"
-                name="mail"
-                id="mail"
-                placeholder="E-mail"
-              />
+              <address>
+                <ul class="list footer-contact">
+                  <li>
+                    <p class="adress">г. Киев, пр-т Леси Украинки, 26<br /></p>
+                  </li>
+                  <li class="footer-contact">
+                    <a href="mailto:info@example.com"
+                      >info@example.com<br />
+                    </a>
+                  </li>
+                  <li class="footer-contact">
+                    <a href="tel:+380991111111">+38 099 111 11 11<br /> </a>
+                  </li>
+                </ul>
+              </address>
             </div>
 
-            <div class="flexbox subscribe">
-              <button class="button footer-button primary">
-                Подписаться
+            <div class="second-block">
+              <b> присоединяйтесь </b>
+              <ul class="list footer-social-list">
+                <li class="footer-social-item f-icon-instagram animation">
+                  <a href="Instagram" aria-label="Ссылка на Instagram">
+                    <svg class="footer-social-icon" width="20px" height="20px">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item f-icon-twitter animation">
+                  <a href="Twitter" aria-label="Ссылка на Twitter">
+                    <svg class="footer-social-icon" width="20px" height="20px">
+                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item f-icon-facebook animation">
+                  <a href="Facebook" aria-label="Ссылка на Facebook">
+                    <svg class="footer-social-icon" width="20px" height="20px">
+                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item f-icon-linked animation">
+                  <a href="LinkedIn" aria-label="Ссылка на LinkedIn">
+                    <svg class="footer-social-icon" width="20px" height="20px">
+                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="third-block">
+            <b> Подпишитесь на рассылку </b>
+            <div class="footer-form">
+              <div class="email-field">
+                <input
+                  class="footer-input animation"
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  placeholder="E-mail"
+                />
+              </div>
 
-                <svg class="sent-icon" width="24px" height="24px">
-                  <use href="./images/symbol-defs.svg#icon-send"></use>
-                </svg>
-              </button>
+              <div class="subscribe">
+                <button class="button footer-button primary">
+                  Подписаться
+
+                  <svg class="sent-icon" width="24px" height="24px">
+                    <use href="./images/symbol-defs.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

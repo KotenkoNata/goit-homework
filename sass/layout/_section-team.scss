@@ -1,8 +1,26 @@
 .team {
   background-color: $secondary-bg-color;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
+
+.members-list {
+  display: flex;
+
+  @include for-size(tablet) {
+    flex-wrap: wrap;
+  }
+
+  @include for-size(phone) {
+    display: block;
+  }
+}
+
 .element-title {
   color: $title-text-color;
   font-weight: 500;
@@ -16,17 +34,44 @@
   margin-top: 0;
   margin-bottom: 16px;
 }
-.members {
-  width: calc((100% - 90px) / 4);
-  margin-right: 30px;
 
+.members {
   background-color: $primary-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:nth-child(4n) {
-    margin-right: o;
+  @include for-size(desktop) {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+
+    &:nth-child(4n) {
+      margin-right: o;
+    }
+  }
+
+  @include for-size(tablet) {
+    width: calc((100% - 30px) / 2);
+
+    margin-bottom: 30px;
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+    &:nth-last-of-type(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-size(phone) {
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+
+    &:nth-child(4n) {
+      margin-bottom: 0;
+    }
   }
 }
 

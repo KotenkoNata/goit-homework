@@ -1,16 +1,10 @@
 .footer-contact {
-  margin-bottom: 9px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   .adress {
     font-weight: 400;
     color: $most-view-text-color;
     font-style: normal;
     margin-top: 20px;
-    margin-bottom: 9px;
+
     margin-left: 0;
     text-align: start;
   }
@@ -24,5 +18,35 @@
     &:focus {
       color: $accent-color;
     }
+  }
+}
+.adress {
+  margin-bottom: 8px;
+
+  @include for-size(desktop) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-contact {
+  @include for-size(phone) {
+    text-align: center;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+  @include for-size(desktop) {
+    margin-bottom: 9px;
+    text-align: left;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include for-size(phone) {
+  .footer-contact .adress {
+    text-align: center;
   }
 }

@@ -1,28 +1,42 @@
 .social-list {
+  display: flex;
   align-items: center;
+  justify-content: center;
+
+  @include for-size(tablet) {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
 }
 
 .social-item {
-  width: calc((100% - 94px) / 4);
   margin-right: 10px;
-  margin-bottom: 24px;
+}
 
-  &:first-of-type {
-    margin-left: 32px;
-  }
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+@include for-size(desktop) {
+  .social-item {
+    width: calc((100% - 94px) / 4);
 
-  &:nth-child(4n) {
-    margin-right: 32px;
-  }
+    margin-bottom: 24px;
 
-  a {
-    display: block;
-    padding: 12px;
+    &:first-of-type {
+      margin-left: 32px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 32px;
+    }
   }
 }
 
 .social-icons-link {
   @include centeredFlex(inline-flex);
+
+  align-items: center;
+  justify-content: center;
 
   border-radius: 50%;
   height: 44px;
@@ -43,24 +57,29 @@
     fill: $primary-bg-color;
   }
 }
+@include for-size(desktop) {
+  .footer-social-item {
+    width: calc((100% - 30px) / 4);
 
+    margin-top: 20px;
+    margin-right: 10px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
 .footer-social-item {
-  display: inline-block;
+  display: inline-flex;
   height: 44px;
   width: 44px;
+  margin-right: 10px;
   border-radius: 50%;
   background-size: 20px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: $foter-icon-bg;
 
-  width: calc((100% - 30px) / 4);
-  margin-right: 10px;
-  margin-top: 20px;
-
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
   &:hover,
   &:focus {
     background-color: $accent-color;
@@ -77,4 +96,14 @@
 }
 .sent-icon {
   margin-left: 10px;
+}
+.footer-social-list {
+  display: flex;
+  justify-content: flex-start;
+
+  @include for-size(phone) {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
 }

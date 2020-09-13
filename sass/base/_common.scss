@@ -1,3 +1,9 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   color: $primary-text-color;
   background-color: $primary-bg-color;
@@ -6,6 +12,10 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.71;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 .details {
   color: $most-view-text-color;
@@ -18,6 +28,7 @@ body {
 header {
   border: 1px solid $header-color;
 }
+
 .animation {
   transition-duration: 250ms;
   transition-timing-function: $timing-function;
@@ -30,23 +41,51 @@ header {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+
+  @include for-size(tablet) {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
+}
+
+@include for-size(phone) {
+  .section-title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
 }
 img {
   display: block;
-}
-
-.header,
-.footer,
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 100%;
+  height: auto;
 }
 b {
   font-weight: 700;
   line-height: 1.14;
   color: $most-view-text-color;
   text-transform: uppercase;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include for-size(phone) {
+    max-width: $phone-width;
+  }
+  @include for-size(tablet) {
+    max-width: $tablet-width;
+  }
+  @include for-size(desktop) {
+    max-width: $desktop-width;
+  }
+}
+
+header,
+main,
+footer {
 }

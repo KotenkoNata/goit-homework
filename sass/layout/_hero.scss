@@ -1,10 +1,8 @@
 .hero {
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
 
-  height: 600px;
   max-width: 1600px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -14,11 +12,82 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/Hero/Header.jpg);
+    url(./../images/optimaze/herodesktop.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+@include for-size(phone) {
+  .hero {
+    height: 400px;
 
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(./../images/optimaze/herophone.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(./../images/optimaze/herophone2@.jpg);
+    }
+  }
+}
+
+@include for-size(desktop) {
+  .hero {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(./../images/optimaze/herodesktop.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(./../images/optimaze/herodesktop2@.jpg);
+    }
+  }
+}
+
+@include for-size(tablet) {
+  .hero {
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(./../images/optimaze/herotablet.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(./../images/optimaze/herotablet2@.jpg);
+    }
+  }
+}
 .hero-title {
   color: $most-view-text-color;
   font-weight: 900;
@@ -31,5 +100,14 @@
 
   + a {
     align-items: center;
+  }
+
+  @include for-size(phone) {
+    font-size: 25px;
+    line-height: 1.62;
+  }
+  @include for-size(tablet) {
+    font-size: 26px;
+    line-height: 1.62;
   }
 }

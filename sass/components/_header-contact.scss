@@ -1,14 +1,28 @@
-.header-contact {
-  margin-left: auto;
+@include for-size(desktop) {
+  .header-contact-link {
+    display: flex;
+  }
+  .header-contact .item + .item {
+    margin-left: 30px;
+  }
+  .header-contact {
+    display: flex;
+    margin-left: auto;
 
-  font-style: normal;
+    & a {
+      line-height: 1.14;
+    }
+  }
+}
+
+.header-contact {
   font-weight: 500;
+  font-style: normal;
 
   & a {
     color: $primary-text-color;
     text-decoration: none;
     letter-spacing: 0.02em;
-    line-height: 1.14;
     align-items: center;
   }
   > .item a {
@@ -17,7 +31,55 @@
   > .item img {
     margin-right: 10px;
   }
+  @include for-size(phone) {
+    display: none;
+
+    a {
+      font-size: 18px;
+      line-height: 1.17;
+      display: block;
+    }
+    .menu-container & {
+      display: inline-block;
+    }
+    text-align: center;
+  }
+
+  @include for-size(desktop) {
+    a {
+      font-size: 14px;
+      line-height: 1.14;
+      display: block;
+    }
+  }
+  .item {
+    margin-bottom: 16px;
+
+    @include for-size(desktop) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include for-size(tablet) {
+    margin-left: auto;
+    a {
+      display: block;
+      font-size: 12px;
+      line-height: 1.17;
+    }
+    .item {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
+
 .header-contact-icon {
   margin-right: 10px;
   fill: $primary-text-color;
@@ -28,9 +90,6 @@
   }
 }
 
-.header-contact .item + .item {
-  margin-left: 30px;
-}
 .contact-img .header-contact .item a {
   color: $primary-text-color;
   text-decoration: none;

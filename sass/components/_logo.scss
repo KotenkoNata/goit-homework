@@ -2,30 +2,42 @@
   color: $title-text-color;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   text-decoration: none;
-  margin-right: 85px;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  @include for-size(tablet) {
+    margin-right: 88px;
+  }
+}
+
+.logo-accent {
+  color: $accent-color;
+}
+
+.footer-logo {
+  color: $most-view-text-color;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  text-decoration: none;
 
   &:hover,
   &:focus {
     color: $accent-color;
   }
 }
-.logo-accent {
-  color: $accent-color;
-}
-.footer-logo {
-  color: $most-view-text-color;
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-  margin-right: 85px;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
+@include for-size(desktop) {
+  .footer-logo,
+  .logo {
+    margin-right: 85px;
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
