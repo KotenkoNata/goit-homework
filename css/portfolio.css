@@ -790,6 +790,12 @@ b {
   line-height: 1.56;
 }
 
+@media (max-width: 480px) {
+  .gallery .excerpt {
+    font-size: 14px;
+  }
+}
+
 .gallery .gallery-list {
   margin-bottom: 30px;
 }
@@ -869,6 +875,13 @@ b {
   .gallery-relative:hover .hover-text,
   .gallery-relative:focus .hover-text {
     padding: 77px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-relative:hover .hover-text,
+  .gallery-relative:focus .hover-text {
+    padding: 30px 24px;
   }
 }
 

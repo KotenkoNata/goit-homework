@@ -3,7 +3,11 @@
   $tablet: 768px;
   $desktop: 1200px;
 
-  @if $range == phone {
+  @if $range == small-phone {
+    @media (max-width: #{$mobile}) {
+      @content;
+    }
+  } @else if $range == phone {
     @media (max-width: #{$tablet - 1}) {
       @content;
     }

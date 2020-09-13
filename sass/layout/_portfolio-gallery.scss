@@ -31,6 +31,10 @@
   .excerpt {
     font-size: 18px;
     line-height: 1.56;
+
+    @include for-size(small-phone) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -102,7 +106,9 @@
     @include for-size(phone) {
       padding: 77px 24px;
     }
-
+    @include for-size(small-phone) {
+      padding: 30px 24px;
+    }
     @include for-size(tablet) {
       padding: 49px 24px;
     }
