@@ -84,7 +84,7 @@
 
 .hover-text {
   position: absolute;
-  display: flex;
+  display: inline-block;
   top: 0;
   left: 0;
   padding: 63px 24px;
@@ -98,6 +98,14 @@
   .gallery-relative:hover &,
   .gallery-relative:focus & {
     transform: translateY(0);
+
+    @include for-size(phone) {
+      padding: 77px 24px;
+    }
+
+    @include for-size(tablet) {
+      padding: 49px 24px;
+    }
   }
 
   p {

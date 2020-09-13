@@ -844,9 +844,7 @@ b {
 
 .hover-text {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   top: 0;
   left: 0;
   padding: 63px 24px;
@@ -865,6 +863,20 @@ b {
 .gallery-relative:focus .hover-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .gallery-relative:hover .hover-text,
+  .gallery-relative:focus .hover-text {
+    padding: 77px 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gallery-relative:hover .hover-text,
+  .gallery-relative:focus .hover-text {
+    padding: 49px 24px;
+  }
 }
 
 .hover-text p {
