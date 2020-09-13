@@ -34,15 +34,23 @@
   @include for-size(phone) {
     display: none;
 
+    a {
+      font-size: 18px;
+      line-height: 1.17;
+      display: block;
+    }
     .menu-container & {
       display: inline-block;
     }
     text-align: center;
   }
-  a {
-    font-size: 18px;
-    line-height: 1.17;
-    display: block;
+
+  @include for-size(desktop) {
+    a {
+      font-size: 14px;
+      line-height: 1.14;
+      display: block;
+    }
   }
   .item {
     margin-bottom: 16px;

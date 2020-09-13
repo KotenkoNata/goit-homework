@@ -27,10 +27,6 @@ body.modal-open {
 }
 header {
   border: 1px solid $header-color;
-
-  @include for-size(phone) {
-    border: none;
-  }
 }
 
 .animation {

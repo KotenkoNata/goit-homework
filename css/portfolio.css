@@ -220,12 +220,6 @@ header {
   border: 1px solid #ececec;
 }
 
-@media (max-width: 767px) {
-  header {
-    border: none;
-  }
-}
-
 .animation {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -577,15 +571,22 @@ b {
     display: none;
     text-align: center;
   }
+  .header-contact a {
+    font-size: 18px;
+    line-height: 1.17;
+    display: block;
+  }
   .menu-container .header-contact {
     display: inline-block;
   }
 }
 
-.header-contact a {
-  font-size: 18px;
-  line-height: 1.17;
-  display: block;
+@media (min-width: 1200px) {
+  .header-contact a {
+    font-size: 14px;
+    line-height: 1.14;
+    display: block;
+  }
 }
 
 .header-contact .item {

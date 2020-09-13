@@ -220,12 +220,6 @@ header {
   border: 1px solid #ececec;
 }
 
-@media (max-width: 767px) {
-  header {
-    border: none;
-  }
-}
-
 .animation {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -577,15 +571,22 @@ b {
     display: none;
     text-align: center;
   }
+  .header-contact a {
+    font-size: 18px;
+    line-height: 1.17;
+    display: block;
+  }
   .menu-container .header-contact {
     display: inline-block;
   }
 }
 
-.header-contact a {
-  font-size: 18px;
-  line-height: 1.17;
-  display: block;
+@media (min-width: 1200px) {
+  .header-contact a {
+    font-size: 14px;
+    line-height: 1.14;
+    display: block;
+  }
 }
 
 .header-contact .item {
@@ -706,8 +707,8 @@ b {
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/optimaze/herodesktop.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/optimaze/herodesktop.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./../images/optimaze/herodesktop.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/optimaze/herodesktop.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -718,8 +719,8 @@ b {
     padding-top: 118px;
     padding-bottom: 118px;
     background-size: cover;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/optimaze/herophone.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/optimaze/herophone.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./../images/optimaze/herophone.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/optimaze/herophone.jpg);
   }
 }
 
@@ -735,8 +736,8 @@ b {
     padding-top: 200px;
     padding-bottom: 200px;
     background-size: cover;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/optimaze/herodesktop.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/optimaze/herodesktop.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./../images/optimaze/herodesktop.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/optimaze/herodesktop.jpg);
   }
 }
 
@@ -752,8 +753,8 @@ b {
     padding-top: 118px;
     padding-bottom: 118px;
     background-size: cover;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/optimaze/herotablet.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/optimaze/herotablet.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./../images/optimaze/herotablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/optimaze/herotablet.jpg);
   }
 }
 
